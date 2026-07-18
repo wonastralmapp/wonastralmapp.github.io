@@ -662,6 +662,20 @@
 
         const DEFAULT_LANG = 'en';
 
+        // Pick the initial language from the browser's preferences (navigator.languages),
+        // matching by primary subtag (e.g. "fr-FR" → fr, "zh-Hans-CN" → zh). Falls back to English.
+        function detectLang() {
+            const supported = Object.keys(TRANSLATIONS);
+            const prefs = (navigator.languages && navigator.languages.length)
+                ? navigator.languages
+                : [navigator.language || ''];
+            for (const pref of prefs) {
+                const primary = pref.toLowerCase().split('-')[0];
+                if (supported.includes(primary)) return primary;
+            }
+            return DEFAULT_LANG;
+        }
+
         function generateStars(container, starCount = 120, shooterCount = 3) {
             const frag = document.createDocumentFragment();
 
@@ -696,7 +710,7 @@
 
         function initLanguageSwitcher(toggle, menu, flagSlot) {
             const options = new Map();
-            let currentLang = DEFAULT_LANG;
+            let currentLang = detectLang();
 
             function applyLanguage(lang) {
                 const dict = TRANSLATIONS[lang];
