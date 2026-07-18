@@ -354,97 +354,68 @@
         <div class="header">
             <h1 data-i18n="title">MultiSubPlayer</h1>
             <p class="subtitle" data-i18n="subtitle">Privacy Policy</p>
-            <p class="last-updated"><span data-i18n="lastUpdatedLabel">Last updated:</span> <span data-i18n="lastUpdatedDate">July 18, 2026</span></p>
+            <p class="last-updated"><span data-i18n="effectiveLabel">Effective date:</span> <span data-i18n="effectiveDate">July 3, 2026</span></p>
         </div>
 
         <div class="policy">
             <section>
-                <h2 data-i18n="introTitle">1. Introduction</h2>
-                <p data-i18n="introText">This Privacy Policy describes how the mobile application "MultiSubPlayer" (the "App"), published by Wonastral, handles information when you use it on an Android device. MultiSubPlayer is a media player and language-learning tool that lets you watch or listen to your own video and audio files with subtitles, generate and translate subtitles, use text-to-speech, look up words, and create AnkiDroid flashcards. By installing or using the App, you agree to the practices described below.</p>
+                <p data-i18n="introText">MultiSubPlayer, published by Wonastral Mapp, respects your privacy. The App does not collect, store, or share your personal information with the developer, and contains no developer analytics or tracking. The free version shows ads served by Google AdMob (see the Advertising section below); the ad-removal (Pro) upgrade disables all ads.</p>
             </section>
 
             <section>
-                <h2 data-i18n="noDataTitle">2. No Account and No Data Collected by the Developer</h2>
-                <p data-i18n="noDataText1">The App does not require an account and does not collect, store, or share any personal data about you on our side. We do not ask for your name, email address, or phone number. The App contains no advertising, no analytics or tracking SDKs, and no third-party crash-reporting tools.</p>
-                <p data-i18n="noDataText2">Wonastral does not operate any server for this App. We never receive your media files, subtitles, settings, or usage data.</p>
+                <h2 data-i18n="dataTitle">1. Data Stored on Your Device</h2>
+                <p data-i18n="dataText">All of your data — app settings, bookmarks, saved words, edited or generated subtitles, downloaded models, and any API keys you enter — is stored only on your device. It is never sent to the developer. API keys are stored encrypted at rest using the Android Keystore.</p>
             </section>
 
             <section>
-                <h2 data-i18n="localTitle">3. Data Stored Locally on Your Device</h2>
-                <p data-i18n="localText1">Everything the App creates or remembers is stored locally on your device, in the App's private storage. This includes:</p>
+                <h2 data-i18n="permTitle">2. Permissions the App Requests</h2>
                 <ul>
-                    <li data-i18n="localItem1">App settings and preferences (language, playback and display options);</li>
-                    <li data-i18n="localItem2">API keys you enter (for example your Groq API key);</li>
-                    <li data-i18n="localItem3">Favorites, bookmarks, and saved words;</li>
-                    <li data-i18n="localItem4">Generated subtitles, translations, and text-to-speech audio;</li>
-                    <li data-i18n="localItem5">Your subtitle edits and synchronization adjustments;</li>
-                    <li data-i18n="localItem6">Speech-to-text and text-to-speech models you choose to download.</li>
+                    <li data-i18n="permItem1">Storage / media access — to find and play your video and audio files and to detect matching subtitle files.</li>
+                    <li data-i18n="permItem2">Microphone — used only for the Speaking practice in Study mode (speech recognition). Audio is not recorded to disk or sent to the developer.</li>
+                    <li data-i18n="permItem3">Notifications & foreground service — for background playback and media controls.</li>
+                    <li data-i18n="permItem4">Internet — used only for the optional online features described below.</li>
                 </ul>
-                <p data-i18n="localText2">This information stays on your device, is never transmitted to us, and can be erased at any time from the App's settings ("Reset app data") or by uninstalling the App.</p>
             </section>
 
             <section>
-                <h2 data-i18n="filesTitle">4. Media and Subtitle Files</h2>
-                <p data-i18n="filesText1">The App plays video and audio files that you already have on your device and reads the associated subtitle files. To do this, the App requests access to media and files on your device. Broad file access ("All files access") is used only to automatically detect subtitle files that match the name of the media you open. Your files are read and processed locally and are not uploaded to any Wonastral server.</p>
-                <p data-i18n="filesText2">The App does not use the microphone. Speech-to-text works on the audio contained in the media file you open, not on live recording.</p>
+                <h2 data-i18n="onlineTitle">3. Optional Online Features (Only When You Use Them)</h2>
+                <ul>
+                    <li><span data-i18n="onlineItem1a">Subtitle generation and high-quality translation (Groq) — when you use these features, the relevant audio excerpt or subtitle text is sent over an encrypted connection (HTTPS) to the Groq API, using the API key you provide. This data is handled under Groq's privacy policy:</span> <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a>. <span data-i18n="onlineItem1b">The developer never receives, stores, or has access to this data or your API key. If you do not use these features, nothing is sent.</span></li>
+                    <li data-i18n="onlineItem2">Speaking practice — uses your device's built-in speech recognition, which may be processed by your device's speech provider (for example, Google), under that provider's privacy policy.</li>
+                    <li data-i18n="onlineItem3">Model downloads — on-device translation (ML Kit) and speech-recognition (Whisper) models are downloaded from their providers the first time you use them. Only model files are downloaded; no personal data is sent.</li>
+                    <li data-i18n="onlineItem4">External lookups — when you run a dictionary, translate, or AI search action on subtitle text, the selected text is passed via your browser to the service you chose (for example Google Translate or ChatGPT) and handled under that service's privacy policy. Text selection briefly uses the system clipboard, which other apps could read on Android 9 or earlier.</li>
+                </ul>
             </section>
 
             <section>
-                <h2 data-i18n="groqTitle">5. Optional Online Feature — Groq API (Subtitle Generation &amp; Translation)</h2>
-                <p data-i18n="groqText1">The App offers optional features that use Groq, an AI service operated by Groq, Inc., to generate subtitles from a media file's audio (speech-to-text) and to produce high-quality translations. These features are optional and work on a "bring your own key" basis: they run only if you obtain your own free Groq API key and enter it in the App's settings.</p>
-                <p data-i18n="groqText2">When you use these features, the relevant data is sent directly from your device to Groq's servers using your own key: short audio segments extracted from the media you selected (for subtitle generation) and subtitle text (for translation). This data is processed by Groq to return the transcription or translation and is subject to Groq's own privacy policy.</p>
-                <p data-i18n="groqText3">If you never enter a Groq API key, no audio or text is ever sent to Groq. You can obtain a key at <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">console.groq.com/keys</a> and review Groq's practices at <a href="https://groq.com/privacy-policy" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a>.</p>
+                <h2 data-i18n="ankiTitle">4. AnkiDroid Export</h2>
+                <p data-i18n="ankiText">If you export to AnkiDroid, the selected subtitle text and media clip are saved into the AnkiDroid app on your device, with your permission. Nothing is sent to the developer.</p>
             </section>
 
             <section>
-                <h2 data-i18n="gtransTitle">6. Optional Online Feature — Google Translate</h2>
-                <p data-i18n="gtransText">As an alternative translation option, the App can send subtitle or selected text to Google Translate (a service operated by Google LLC) to obtain a translation. This happens only when you choose this option. The text you translate is processed by Google according to its privacy policy, available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+                <h2 data-i18n="sharingTitle">5. Data Sharing</h2>
+                <p data-i18n="sharingText">The developer does not sell or share your data. The only third-party transmission is the optional, user-initiated Groq feature described in section 3.</p>
             </section>
 
             <section>
-                <h2 data-i18n="modelsTitle">7. Optional On-Device Speech Models</h2>
-                <p data-i18n="modelsText">For offline speech-to-text and text-to-speech, the App can download open-source models (for example from GitHub and Hugging Face). Only the model files are downloaded; once installed, transcription and voice synthesis run entirely on your device and no audio or text is sent to those services. Downloading a model involves a standard request to the hosting provider, which may process technical information such as your IP address as part of delivering the file.</p>
+                <h2 data-i18n="childrenTitle">6. Children</h2>
+                <p data-i18n="childrenText">This app is not directed at children under 13 and does not knowingly collect personal information from children.</p>
             </section>
 
             <section>
-                <h2 data-i18n="dictTitle">8. Dictionary and Web Search Links</h2>
-                <p data-i18n="dictText">The App can open external dictionary and search websites (for example Cambridge Dictionary, Naver, Google, and other language dictionaries) in your browser to look up a selected word. When you tap such a link, the word and standard browsing information are sent to that third-party website, which is governed by its own privacy policy. The App itself does not send this data to Wonastral.</p>
+                <h2 data-i18n="adsTitle">Advertising and Consent (Free Version)</h2>
+                <p><span data-i18n="adsText1a">The free version of this app displays ads served by Google AdMob. AdMob may collect and process data such as your device's advertising ID, IP address, and coarse (approximate) location to serve and measure ads, as described in the Google Privacy Policy:</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>. <span data-i18n="adsText1b">You can reset or delete your advertising ID in your device settings.</span></p>
+                <p data-i18n="adsText2">If you are in the European Economic Area, the United Kingdom, or Switzerland, a Google consent form (User Messaging Platform) is shown before personalized ads are served, and you can change your choices at any time in Settings → Privacy options inside the app. Purchasing the ad-removal (Pro) upgrade disables all ads; purchases are processed by Google Play and the developer never receives your payment details.</p>
             </section>
 
             <section>
-                <h2 data-i18n="ankiTitle">9. AnkiDroid Integration</h2>
-                <p data-i18n="ankiText">If you have the AnkiDroid app installed and choose to create a flashcard, the App adds the card (text and optional media) to your AnkiDroid collection on your device, through AnkiDroid's own interface. This is a local, device-to-device action; no card data is sent to Wonastral. Your AnkiDroid data is handled by AnkiDroid according to its own terms.</p>
+                <h2 data-i18n="changesTitle">7. Changes to This Policy</h2>
+                <p data-i18n="changesText">This policy may be updated as the app evolves. The latest version is always available at this page and inside the app (Settings → About → Privacy policy).</p>
             </section>
 
             <section>
-                <h2 data-i18n="playbackTitle">10. Background Playback and Notifications</h2>
-                <p data-i18n="playbackText">To allow playback to continue while the App is in the background, the App may run a foreground service and show a playback notification with media controls. On Android 13 and later, the App may ask for permission to post notifications. These features operate locally on your device and do not collect personal data.</p>
-            </section>
-
-            <section>
-                <h2 data-i18n="choicesTitle">11. Your Choices</h2>
-                <p data-i18n="choicesText1">You control all optional online features: they are used only when you enable them or provide the required key. You can remove your Groq API key at any time in Settings, and you can use the App fully offline with on-device models.</p>
-                <p data-i18n="choicesText2">You can also reset all app data from the settings ("Reset app data") — which clears settings, API keys, favorites, bookmarks, saved words, generated subtitles, translations, text-to-speech audio, subtitle edits, and downloaded models — or uninstall the App at any time to remove all locally stored data.</p>
-            </section>
-
-            <section>
-                <h2 data-i18n="childrenTitle">12. Children's Privacy</h2>
-                <p data-i18n="childrenText">The App is not directed at children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided information through one of the optional third-party services, please contact us so we can take appropriate action.</p>
-            </section>
-
-            <section>
-                <h2 data-i18n="securityTitle">13. Data Security</h2>
-                <p data-i18n="securityText">Because the App does not collect or store personal data on our side, there is no Wonastral-side database that could be breached. Your files, settings, and API keys remain in the App's private storage on your device. Any data processed by the optional third-party services you choose to use (Groq, Google, model hosts, dictionary sites) is protected by those providers' own security measures.</p>
-            </section>
-
-            <section>
-                <h2 data-i18n="changesTitle">14. Changes to This Policy</h2>
-                <p data-i18n="changesText">We may update this Privacy Policy from time to time to reflect changes in the App or in applicable law. The updated version will be posted on this page with a new "Last updated" date. Continued use of the App after a change means you accept the revised policy.</p>
-            </section>
-
-            <section>
-                <h2 data-i18n="contactTitle">15. Contact</h2>
-                <p data-i18n="contactText">If you have any question regarding this Privacy Policy or the App, you can reach us at:</p>
+                <h2 data-i18n="contactTitle">8. Contact</h2>
+                <p data-i18n="contactText">Questions or data-related requests:</p>
                 <p><a href="mailto:wonastral.mapp@gmail.com">wonastral.mapp@gmail.com</a></p>
             </section>
         </div>
@@ -469,50 +440,36 @@
                 docTitle: "MultiSubPlayer — Privacy Policy",
                 title: "MultiSubPlayer",
                 subtitle: "Privacy Policy",
-                lastUpdatedLabel: "Last updated:",
-                lastUpdatedDate: "July 18, 2026",
-                introTitle: "1. Introduction",
-                introText: "This Privacy Policy describes how the mobile application \"MultiSubPlayer\" (the \"App\"), published by Wonastral, handles information when you use it on an Android device. MultiSubPlayer is a media player and language-learning tool that lets you watch or listen to your own video and audio files with subtitles, generate and translate subtitles, use text-to-speech, look up words, and create AnkiDroid flashcards. By installing or using the App, you agree to the practices described below.",
-                noDataTitle: "2. No Account and No Data Collected by the Developer",
-                noDataText1: "The App does not require an account and does not collect, store, or share any personal data about you on our side. We do not ask for your name, email address, or phone number. The App contains no advertising, no analytics or tracking SDKs, and no third-party crash-reporting tools.",
-                noDataText2: "Wonastral does not operate any server for this App. We never receive your media files, subtitles, settings, or usage data.",
-                localTitle: "3. Data Stored Locally on Your Device",
-                localText1: "Everything the App creates or remembers is stored locally on your device, in the App's private storage. This includes:",
-                localItem1: "App settings and preferences (language, playback and display options);",
-                localItem2: "API keys you enter (for example your Groq API key);",
-                localItem3: "Favorites, bookmarks, and saved words;",
-                localItem4: "Generated subtitles, translations, and text-to-speech audio;",
-                localItem5: "Your subtitle edits and synchronization adjustments;",
-                localItem6: "Speech-to-text and text-to-speech models you choose to download.",
-                localText2: "This information stays on your device, is never transmitted to us, and can be erased at any time from the App's settings (\"Reset app data\") or by uninstalling the App.",
-                filesTitle: "4. Media and Subtitle Files",
-                filesText1: "The App plays video and audio files that you already have on your device and reads the associated subtitle files. To do this, the App requests access to media and files on your device. Broad file access (\"All files access\") is used only to automatically detect subtitle files that match the name of the media you open. Your files are read and processed locally and are not uploaded to any Wonastral server.",
-                filesText2: "The App does not use the microphone. Speech-to-text works on the audio contained in the media file you open, not on live recording.",
-                groqTitle: "5. Optional Online Feature — Groq API (Subtitle Generation & Translation)",
-                groqText1: "The App offers optional features that use Groq, an AI service operated by Groq, Inc., to generate subtitles from a media file's audio (speech-to-text) and to produce high-quality translations. These features are optional and work on a \"bring your own key\" basis: they run only if you obtain your own free Groq API key and enter it in the App's settings.",
-                groqText2: "When you use these features, the relevant data is sent directly from your device to Groq's servers using your own key: short audio segments extracted from the media you selected (for subtitle generation) and subtitle text (for translation). This data is processed by Groq to return the transcription or translation and is subject to Groq's own privacy policy.",
-                groqText3: "If you never enter a Groq API key, no audio or text is ever sent to Groq. You can obtain a key at console.groq.com/keys and review Groq's practices at groq.com/privacy-policy.",
-                gtransTitle: "6. Optional Online Feature — Google Translate",
-                gtransText: "As an alternative translation option, the App can send subtitle or selected text to Google Translate (a service operated by Google LLC) to obtain a translation. This happens only when you choose this option. The text you translate is processed by Google according to its privacy policy, available at policies.google.com/privacy.",
-                modelsTitle: "7. Optional On-Device Speech Models",
-                modelsText: "For offline speech-to-text and text-to-speech, the App can download open-source models (for example from GitHub and Hugging Face). Only the model files are downloaded; once installed, transcription and voice synthesis run entirely on your device and no audio or text is sent to those services. Downloading a model involves a standard request to the hosting provider, which may process technical information such as your IP address as part of delivering the file.",
-                dictTitle: "8. Dictionary and Web Search Links",
-                dictText: "The App can open external dictionary and search websites (for example Cambridge Dictionary, Naver, Google, and other language dictionaries) in your browser to look up a selected word. When you tap such a link, the word and standard browsing information are sent to that third-party website, which is governed by its own privacy policy. The App itself does not send this data to Wonastral.",
-                ankiTitle: "9. AnkiDroid Integration",
-                ankiText: "If you have the AnkiDroid app installed and choose to create a flashcard, the App adds the card (text and optional media) to your AnkiDroid collection on your device, through AnkiDroid's own interface. This is a local, device-to-device action; no card data is sent to Wonastral. Your AnkiDroid data is handled by AnkiDroid according to its own terms.",
-                playbackTitle: "10. Background Playback and Notifications",
-                playbackText: "To allow playback to continue while the App is in the background, the App may run a foreground service and show a playback notification with media controls. On Android 13 and later, the App may ask for permission to post notifications. These features operate locally on your device and do not collect personal data.",
-                choicesTitle: "11. Your Choices",
-                choicesText1: "You control all optional online features: they are used only when you enable them or provide the required key. You can remove your Groq API key at any time in Settings, and you can use the App fully offline with on-device models.",
-                choicesText2: "You can also reset all app data from the settings (\"Reset app data\") — which clears settings, API keys, favorites, bookmarks, saved words, generated subtitles, translations, text-to-speech audio, subtitle edits, and downloaded models — or uninstall the App at any time to remove all locally stored data.",
-                childrenTitle: "12. Children's Privacy",
-                childrenText: "The App is not directed at children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided information through one of the optional third-party services, please contact us so we can take appropriate action.",
-                securityTitle: "13. Data Security",
-                securityText: "Because the App does not collect or store personal data on our side, there is no Wonastral-side database that could be breached. Your files, settings, and API keys remain in the App's private storage on your device. Any data processed by the optional third-party services you choose to use (Groq, Google, model hosts, dictionary sites) is protected by those providers' own security measures.",
-                changesTitle: "14. Changes to This Policy",
-                changesText: "We may update this Privacy Policy from time to time to reflect changes in the App or in applicable law. The updated version will be posted on this page with a new \"Last updated\" date. Continued use of the App after a change means you accept the revised policy.",
-                contactTitle: "15. Contact",
-                contactText: "If you have any question regarding this Privacy Policy or the App, you can reach us at:",
+                effectiveLabel: "Effective date:",
+                effectiveDate: "July 3, 2026",
+                introText: "MultiSubPlayer, published by Wonastral Mapp, respects your privacy. The App does not collect, store, or share your personal information with the developer, and contains no developer analytics or tracking. The free version shows ads served by Google AdMob (see the Advertising section below); the ad-removal (Pro) upgrade disables all ads.",
+                dataTitle: "1. Data Stored on Your Device",
+                dataText: "All of your data — app settings, bookmarks, saved words, edited or generated subtitles, downloaded models, and any API keys you enter — is stored only on your device. It is never sent to the developer. API keys are stored encrypted at rest using the Android Keystore.",
+                permTitle: "2. Permissions the App Requests",
+                permItem1: "Storage / media access — to find and play your video and audio files and to detect matching subtitle files.",
+                permItem2: "Microphone — used only for the Speaking practice in Study mode (speech recognition). Audio is not recorded to disk or sent to the developer.",
+                permItem3: "Notifications & foreground service — for background playback and media controls.",
+                permItem4: "Internet — used only for the optional online features described below.",
+                onlineTitle: "3. Optional Online Features (Only When You Use Them)",
+                onlineItem1a: "Subtitle generation and high-quality translation (Groq) — when you use these features, the relevant audio excerpt or subtitle text is sent over an encrypted connection (HTTPS) to the Groq API, using the API key you provide. This data is handled under Groq's privacy policy:",
+                onlineItem1b: "The developer never receives, stores, or has access to this data or your API key. If you do not use these features, nothing is sent.",
+                onlineItem2: "Speaking practice — uses your device's built-in speech recognition, which may be processed by your device's speech provider (for example, Google), under that provider's privacy policy.",
+                onlineItem3: "Model downloads — on-device translation (ML Kit) and speech-recognition (Whisper) models are downloaded from their providers the first time you use them. Only model files are downloaded; no personal data is sent.",
+                onlineItem4: "External lookups — when you run a dictionary, translate, or AI search action on subtitle text, the selected text is passed via your browser to the service you chose (for example Google Translate or ChatGPT) and handled under that service's privacy policy. Text selection briefly uses the system clipboard, which other apps could read on Android 9 or earlier.",
+                ankiTitle: "4. AnkiDroid Export",
+                ankiText: "If you export to AnkiDroid, the selected subtitle text and media clip are saved into the AnkiDroid app on your device, with your permission. Nothing is sent to the developer.",
+                sharingTitle: "5. Data Sharing",
+                sharingText: "The developer does not sell or share your data. The only third-party transmission is the optional, user-initiated Groq feature described in section 3.",
+                childrenTitle: "6. Children",
+                childrenText: "This app is not directed at children under 13 and does not knowingly collect personal information from children.",
+                adsTitle: "Advertising and Consent (Free Version)",
+                adsText1a: "The free version of this app displays ads served by Google AdMob. AdMob may collect and process data such as your device's advertising ID, IP address, and coarse (approximate) location to serve and measure ads, as described in the Google Privacy Policy:",
+                adsText1b: "You can reset or delete your advertising ID in your device settings.",
+                adsText2: "If you are in the European Economic Area, the United Kingdom, or Switzerland, a Google consent form (User Messaging Platform) is shown before personalized ads are served, and you can change your choices at any time in Settings → Privacy options inside the app. Purchasing the ad-removal (Pro) upgrade disables all ads; purchases are processed by Google Play and the developer never receives your payment details.",
+                changesTitle: "7. Changes to This Policy",
+                changesText: "This policy may be updated as the app evolves. The latest version is always available at this page and inside the app (Settings → About → Privacy policy).",
+                contactTitle: "8. Contact",
+                contactText: "Questions or data-related requests:",
                 footer: "© 2026 Wonastral — All rights reserved"
             },
             fr: {
@@ -520,50 +477,36 @@
                 docTitle: "MultiSubPlayer — Politique de confidentialité",
                 title: "MultiSubPlayer",
                 subtitle: "Politique de confidentialité",
-                lastUpdatedLabel: "Dernière mise à jour :",
-                lastUpdatedDate: "18 juillet 2026",
-                introTitle: "1. Introduction",
-                introText: "La présente politique de confidentialité décrit la manière dont l'application mobile « MultiSubPlayer » (l'« Application »), éditée par Wonastral, traite les informations lorsque vous l'utilisez sur un appareil Android. MultiSubPlayer est un lecteur multimédia et un outil d'apprentissage des langues qui vous permet de regarder ou d'écouter vos propres fichiers vidéo et audio avec sous-titres, de générer et de traduire des sous-titres, d'utiliser la synthèse vocale, de rechercher des mots et de créer des cartes AnkiDroid. En installant ou en utilisant l'Application, vous acceptez les pratiques décrites ci-dessous.",
-                noDataTitle: "2. Aucun compte et aucune donnée collectée par le développeur",
-                noDataText1: "L'Application ne nécessite pas de compte et ne collecte, ne stocke ni ne partage aucune donnée personnelle vous concernant de notre côté. Nous ne demandons ni votre nom, ni votre adresse e-mail, ni votre numéro de téléphone. L'Application ne contient aucune publicité, aucun SDK d'analyse ou de suivi, ni aucun outil tiers de rapport de plantage.",
-                noDataText2: "Wonastral n'exploite aucun serveur pour cette Application. Nous ne recevons jamais vos fichiers multimédias, vos sous-titres, vos réglages ni vos données d'utilisation.",
-                localTitle: "3. Données stockées localement sur votre appareil",
-                localText1: "Tout ce que l'Application crée ou mémorise est stocké localement sur votre appareil, dans le stockage privé de l'Application. Cela comprend :",
-                localItem1: "Les réglages et préférences de l'Application (langue, options de lecture et d'affichage) ;",
-                localItem2: "Les clés API que vous saisissez (par exemple votre clé API Groq) ;",
-                localItem3: "Les favoris, les signets et les mots enregistrés ;",
-                localItem4: "Les sous-titres générés, les traductions et l'audio de synthèse vocale ;",
-                localItem5: "Vos modifications de sous-titres et vos ajustements de synchronisation ;",
-                localItem6: "Les modèles de reconnaissance vocale et de synthèse vocale que vous choisissez de télécharger.",
-                localText2: "Ces informations restent sur votre appareil, ne nous sont jamais transmises et peuvent être effacées à tout moment depuis les réglages de l'Application (« Réinitialiser les données de l'application ») ou en désinstallant l'Application.",
-                filesTitle: "4. Fichiers multimédias et sous-titres",
-                filesText1: "L'Application lit les fichiers vidéo et audio que vous possédez déjà sur votre appareil et lit les fichiers de sous-titres associés. Pour cela, l'Application demande l'accès aux fichiers multimédias et aux fichiers de votre appareil. L'accès étendu aux fichiers (« Accès à tous les fichiers ») sert uniquement à détecter automatiquement les fichiers de sous-titres correspondant au nom du média que vous ouvrez. Vos fichiers sont lus et traités localement et ne sont téléversés vers aucun serveur de Wonastral.",
-                filesText2: "L'Application n'utilise pas le microphone. La reconnaissance vocale s'applique à l'audio contenu dans le fichier multimédia que vous ouvrez, et non à un enregistrement en direct.",
-                groqTitle: "5. Fonction en ligne facultative — API Groq (génération et traduction de sous-titres)",
-                groqText1: "L'Application propose des fonctions facultatives qui utilisent Groq, un service d'IA exploité par Groq, Inc., pour générer des sous-titres à partir de l'audio d'un fichier multimédia (reconnaissance vocale) et pour produire des traductions de haute qualité. Ces fonctions sont facultatives et fonctionnent selon le principe « apportez votre propre clé » : elles ne s'exécutent que si vous obtenez votre propre clé API Groq gratuite et la saisissez dans les réglages de l'Application.",
-                groqText2: "Lorsque vous utilisez ces fonctions, les données concernées sont envoyées directement depuis votre appareil vers les serveurs de Groq à l'aide de votre propre clé : de courts segments audio extraits du média que vous avez sélectionné (pour la génération de sous-titres) et le texte des sous-titres (pour la traduction). Ces données sont traitées par Groq afin de renvoyer la transcription ou la traduction et sont soumises à la propre politique de confidentialité de Groq.",
-                groqText3: "Si vous ne saisissez jamais de clé API Groq, aucun audio ni aucun texte n'est jamais envoyé à Groq. Vous pouvez obtenir une clé sur console.groq.com/keys et consulter les pratiques de Groq sur groq.com/privacy-policy.",
-                gtransTitle: "6. Fonction en ligne facultative — Google Traduction",
-                gtransText: "Comme option de traduction alternative, l'Application peut envoyer les sous-titres ou le texte sélectionné à Google Traduction (un service exploité par Google LLC) pour obtenir une traduction. Cela ne se produit que si vous choisissez cette option. Le texte que vous traduisez est traité par Google conformément à sa politique de confidentialité, disponible sur policies.google.com/privacy.",
-                modelsTitle: "7. Modèles vocaux facultatifs sur l'appareil",
-                modelsText: "Pour la reconnaissance vocale et la synthèse vocale hors ligne, l'Application peut télécharger des modèles open source (par exemple depuis GitHub et Hugging Face). Seuls les fichiers de modèles sont téléchargés ; une fois installés, la transcription et la synthèse vocale s'exécutent entièrement sur votre appareil et aucun audio ni texte n'est envoyé à ces services. Le téléchargement d'un modèle implique une requête standard vers l'hébergeur, qui peut traiter des informations techniques telles que votre adresse IP dans le cadre de la livraison du fichier.",
-                dictTitle: "8. Liens vers des dictionnaires et recherches web",
-                dictText: "L'Application peut ouvrir des sites web de dictionnaires et de recherche externes (par exemple Cambridge Dictionary, Naver, Google et d'autres dictionnaires de langues) dans votre navigateur pour rechercher un mot sélectionné. Lorsque vous appuyez sur un tel lien, le mot et les informations de navigation standard sont envoyés à ce site tiers, régi par sa propre politique de confidentialité. L'Application elle-même n'envoie pas ces données à Wonastral.",
-                ankiTitle: "9. Intégration AnkiDroid",
-                ankiText: "Si l'application AnkiDroid est installée et que vous choisissez de créer une carte, l'Application ajoute la carte (texte et média facultatif) à votre collection AnkiDroid sur votre appareil, via l'interface propre à AnkiDroid. Il s'agit d'une action locale, d'appareil à appareil ; aucune donnée de carte n'est envoyée à Wonastral. Vos données AnkiDroid sont gérées par AnkiDroid conformément à ses propres conditions.",
-                playbackTitle: "10. Lecture en arrière-plan et notifications",
-                playbackText: "Pour permettre à la lecture de se poursuivre lorsque l'Application est en arrière-plan, l'Application peut exécuter un service au premier plan et afficher une notification de lecture avec des commandes multimédias. Sous Android 13 et versions ultérieures, l'Application peut demander l'autorisation d'afficher des notifications. Ces fonctions fonctionnent localement sur votre appareil et ne collectent aucune donnée personnelle.",
-                choicesTitle: "11. Vos choix",
-                choicesText1: "Vous contrôlez toutes les fonctions en ligne facultatives : elles ne sont utilisées que lorsque vous les activez ou fournissez la clé requise. Vous pouvez supprimer votre clé API Groq à tout moment dans les réglages, et vous pouvez utiliser l'Application entièrement hors ligne avec des modèles sur l'appareil.",
-                choicesText2: "Vous pouvez également réinitialiser toutes les données de l'application depuis les réglages (« Réinitialiser les données de l'application ») — ce qui efface les réglages, les clés API, les favoris, les signets, les mots enregistrés, les sous-titres générés, les traductions, l'audio de synthèse vocale, les modifications de sous-titres et les modèles téléchargés — ou désinstaller l'Application à tout moment pour supprimer toutes les données stockées localement.",
-                childrenTitle: "12. Protection des mineurs",
-                childrenText: "L'Application ne s'adresse pas aux enfants de moins de 13 ans (ou à l'âge minimum équivalent dans votre juridiction). Nous ne collectons pas sciemment de données personnelles auprès d'enfants. Si vous pensez qu'un enfant a fourni des informations via l'un des services tiers facultatifs, veuillez nous contacter afin que nous puissions prendre les mesures appropriées.",
-                securityTitle: "13. Sécurité des données",
-                securityText: "L'Application ne collectant ni ne stockant aucune donnée personnelle de notre côté, il n'existe aucune base de données côté Wonastral susceptible d'être compromise. Vos fichiers, réglages et clés API restent dans le stockage privé de l'Application sur votre appareil. Toute donnée traitée par les services tiers facultatifs que vous choisissez d'utiliser (Groq, Google, hébergeurs de modèles, sites de dictionnaires) est protégée par les propres mesures de sécurité de ces fournisseurs.",
-                changesTitle: "14. Modifications de la présente politique",
-                changesText: "Nous pouvons être amenés à mettre à jour cette politique de confidentialité afin de refléter des évolutions de l'Application ou de la législation applicable. La version mise à jour sera publiée sur cette page avec une nouvelle date de « Dernière mise à jour ». La poursuite de l'utilisation de l'Application après une modification vaut acceptation de la politique révisée.",
-                contactTitle: "15. Contact",
-                contactText: "Pour toute question concernant cette politique de confidentialité ou l'Application, vous pouvez nous écrire à :",
+                effectiveLabel: "Date d'entrée en vigueur :",
+                effectiveDate: "3 juillet 2026",
+                introText: "MultiSubPlayer, éditée par Wonastral Mapp, respecte votre vie privée. L'Application ne collecte, ne stocke ni ne partage aucune donnée personnelle avec le développeur, et ne contient ni outil d'analyse (analytics) ni traceur du développeur. La version gratuite affiche des publicités diffusées par Google AdMob (voir la section « Publicité » ci-dessous) ; la mise à niveau Pro (suppression des publicités) désactive toutes les publicités.",
+                dataTitle: "1. Données stockées sur votre appareil",
+                dataText: "Toutes vos données — réglages de l'application, signets, mots enregistrés, sous-titres modifiés ou générés, modèles téléchargés et clés API que vous saisissez — sont stockées uniquement sur votre appareil. Elles ne sont jamais transmises au développeur. Les clés API sont stockées chiffrées au repos à l'aide de l'Android Keystore.",
+                permTitle: "2. Autorisations demandées par l'application",
+                permItem1: "Stockage / accès aux médias — pour trouver et lire vos fichiers vidéo et audio et détecter les fichiers de sous-titres correspondants.",
+                permItem2: "Microphone — utilisé uniquement pour l'exercice d'expression orale du mode Étude (reconnaissance vocale). L'audio n'est ni enregistré sur le disque ni envoyé au développeur.",
+                permItem3: "Notifications et service de premier plan — pour la lecture en arrière-plan et les commandes multimédias.",
+                permItem4: "Internet — utilisé uniquement pour les fonctions en ligne optionnelles décrites ci-dessous.",
+                onlineTitle: "3. Fonctions en ligne optionnelles (uniquement lorsque vous les utilisez)",
+                onlineItem1a: "Génération de sous-titres et traduction de haute qualité (Groq) — lorsque vous utilisez ces fonctions, l'extrait audio ou le texte de sous-titres concerné est envoyé via une connexion chiffrée (HTTPS) à l'API Groq, avec la clé API que vous fournissez. Ces données sont traitées conformément à la politique de confidentialité de Groq :",
+                onlineItem1b: "Le développeur ne reçoit, ne stocke ni ne consulte jamais ces données ni votre clé API. Si vous n'utilisez pas ces fonctions, rien n'est envoyé.",
+                onlineItem2: "Exercice d'expression orale — utilise la reconnaissance vocale intégrée de votre appareil, qui peut être traitée par le fournisseur de reconnaissance vocale de l'appareil (par exemple Google), conformément à la politique de confidentialité de ce fournisseur.",
+                onlineItem3: "Téléchargement de modèles — les modèles de traduction sur l'appareil (ML Kit) et de reconnaissance vocale (Whisper) sont téléchargés auprès de leurs fournisseurs lors de la première utilisation. Seuls les fichiers de modèle sont téléchargés ; aucune donnée personnelle n'est envoyée.",
+                onlineItem4: "Recherches externes — lorsque vous lancez une action de dictionnaire, de traduction ou de recherche IA sur le texte d'un sous-titre, le texte sélectionné est transmis via votre navigateur au service choisi (par exemple Google Traduction ou ChatGPT), selon la politique de confidentialité de ce service. La sélection de texte passe brièvement par le presse-papiers système, lisible par d'autres applications sous Android 9 ou antérieur.",
+                ankiTitle: "4. Export vers AnkiDroid",
+                ankiText: "Si vous exportez vers AnkiDroid, le texte de sous-titres sélectionné et l'extrait multimédia sont enregistrés, avec votre autorisation, dans l'application AnkiDroid de votre appareil. Rien n'est envoyé au développeur.",
+                sharingTitle: "5. Partage des données",
+                sharingText: "Le développeur ne vend ni ne partage vos données. La seule transmission à un tiers est la fonction Groq optionnelle, déclenchée par l'utilisateur, décrite à la section 3.",
+                childrenTitle: "6. Enfants",
+                childrenText: "Cette application ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment de données personnelles auprès d'enfants.",
+                adsTitle: "Publicité et consentement (version gratuite)",
+                adsText1a: "La version gratuite de cette application affiche des publicités diffusées par Google AdMob. AdMob peut collecter et traiter des données telles que l'identifiant publicitaire de votre appareil, votre adresse IP et votre localisation approximative afin de diffuser et de mesurer les publicités, comme décrit dans la politique de confidentialité de Google :",
+                adsText1b: "Vous pouvez réinitialiser ou supprimer votre identifiant publicitaire dans les paramètres de votre appareil.",
+                adsText2: "Dans l'Espace économique européen, au Royaume-Uni et en Suisse, un formulaire de consentement Google (User Messaging Platform) s'affiche avant la diffusion de publicités personnalisées, et vous pouvez modifier vos choix à tout moment dans Réglages → Options de confidentialité au sein de l'application. L'achat de la mise à niveau Pro (suppression des publicités) désactive toutes les publicités ; les paiements sont traités par Google Play et le développeur ne reçoit jamais vos informations de paiement.",
+                changesTitle: "7. Modifications de cette politique",
+                changesText: "Cette politique peut être mise à jour au fil de l'évolution de l'application. La version la plus récente est toujours disponible sur cette page et dans l'application (Paramètres → À propos → Politique de confidentialité).",
+                contactTitle: "8. Contact",
+                contactText: "Questions ou demandes relatives aux données :",
                 footer: "© 2026 Wonastral — Tous droits réservés"
             },
             es: {
@@ -571,50 +514,36 @@
                 docTitle: "MultiSubPlayer — Política de privacidad",
                 title: "MultiSubPlayer",
                 subtitle: "Política de privacidad",
-                lastUpdatedLabel: "Última actualización:",
-                lastUpdatedDate: "18 de julio de 2026",
-                introTitle: "1. Introducción",
-                introText: "Esta Política de privacidad describe cómo la aplicación móvil «MultiSubPlayer» (la «Aplicación»), publicada por Wonastral, gestiona la información cuando la utiliza en un dispositivo Android. MultiSubPlayer es un reproductor multimedia y una herramienta de aprendizaje de idiomas que le permite ver o escuchar sus propios archivos de vídeo y audio con subtítulos, generar y traducir subtítulos, usar la síntesis de voz, buscar palabras y crear tarjetas de AnkiDroid. Al instalar o utilizar la Aplicación, usted acepta las prácticas descritas a continuación.",
-                noDataTitle: "2. Sin cuenta y sin datos recopilados por el desarrollador",
-                noDataText1: "La Aplicación no requiere una cuenta y no recopila, almacena ni comparte ningún dato personal sobre usted por nuestra parte. No solicitamos su nombre, dirección de correo electrónico ni número de teléfono. La Aplicación no contiene publicidad, ni SDK de análisis o seguimiento, ni herramientas de terceros para informes de fallos.",
-                noDataText2: "Wonastral no opera ningún servidor para esta Aplicación. Nunca recibimos sus archivos multimedia, subtítulos, ajustes ni datos de uso.",
-                localTitle: "3. Datos almacenados localmente en su dispositivo",
-                localText1: "Todo lo que la Aplicación crea o recuerda se almacena localmente en su dispositivo, en el almacenamiento privado de la Aplicación. Esto incluye:",
-                localItem1: "Ajustes y preferencias de la Aplicación (idioma, opciones de reproducción y visualización);",
-                localItem2: "Las claves API que introduce (por ejemplo, su clave API de Groq);",
-                localItem3: "Favoritos, marcadores y palabras guardadas;",
-                localItem4: "Subtítulos generados, traducciones y audio de síntesis de voz;",
-                localItem5: "Sus ediciones de subtítulos y ajustes de sincronización;",
-                localItem6: "Los modelos de reconocimiento de voz y de síntesis de voz que decide descargar.",
-                localText2: "Esta información permanece en su dispositivo, nunca se nos transmite y puede borrarse en cualquier momento desde los ajustes de la Aplicación («Restablecer datos de la aplicación») o desinstalando la Aplicación.",
-                filesTitle: "4. Archivos multimedia y de subtítulos",
-                filesText1: "La Aplicación reproduce archivos de vídeo y audio que ya tiene en su dispositivo y lee los archivos de subtítulos asociados. Para ello, la Aplicación solicita acceso a los archivos multimedia y a los archivos de su dispositivo. El acceso amplio a los archivos («Acceso a todos los archivos») se utiliza únicamente para detectar automáticamente los archivos de subtítulos que coinciden con el nombre del medio que abre. Sus archivos se leen y procesan localmente y no se suben a ningún servidor de Wonastral.",
-                filesText2: "La Aplicación no utiliza el micrófono. El reconocimiento de voz funciona sobre el audio contenido en el archivo multimedia que abre, no sobre una grabación en directo.",
-                groqTitle: "5. Función en línea opcional — API de Groq (generación y traducción de subtítulos)",
-                groqText1: "La Aplicación ofrece funciones opcionales que utilizan Groq, un servicio de IA operado por Groq, Inc., para generar subtítulos a partir del audio de un archivo multimedia (reconocimiento de voz) y para producir traducciones de alta calidad. Estas funciones son opcionales y funcionan con el principio de «traiga su propia clave»: solo se ejecutan si obtiene su propia clave API de Groq gratuita y la introduce en los ajustes de la Aplicación.",
-                groqText2: "Cuando utiliza estas funciones, los datos correspondientes se envían directamente desde su dispositivo a los servidores de Groq usando su propia clave: fragmentos de audio breves extraídos del medio que seleccionó (para la generación de subtítulos) y el texto de los subtítulos (para la traducción). Estos datos son tratados por Groq para devolver la transcripción o la traducción y están sujetos a la propia política de privacidad de Groq.",
-                groqText3: "Si nunca introduce una clave API de Groq, no se envía ningún audio ni texto a Groq. Puede obtener una clave en console.groq.com/keys y consultar las prácticas de Groq en groq.com/privacy-policy.",
-                gtransTitle: "6. Función en línea opcional — Google Traductor",
-                gtransText: "Como opción de traducción alternativa, la Aplicación puede enviar los subtítulos o el texto seleccionado a Google Traductor (un servicio operado por Google LLC) para obtener una traducción. Esto solo ocurre cuando usted elige esta opción. El texto que traduce es tratado por Google de acuerdo con su política de privacidad, disponible en policies.google.com/privacy.",
-                modelsTitle: "7. Modelos de voz opcionales en el dispositivo",
-                modelsText: "Para el reconocimiento de voz y la síntesis de voz sin conexión, la Aplicación puede descargar modelos de código abierto (por ejemplo, desde GitHub y Hugging Face). Solo se descargan los archivos de los modelos; una vez instalados, la transcripción y la síntesis de voz se ejecutan completamente en su dispositivo y no se envía ningún audio ni texto a esos servicios. La descarga de un modelo implica una solicitud estándar al proveedor de alojamiento, que puede tratar información técnica como su dirección IP como parte de la entrega del archivo.",
-                dictTitle: "8. Enlaces a diccionarios y búsquedas web",
-                dictText: "La Aplicación puede abrir sitios web externos de diccionarios y de búsqueda (por ejemplo, Cambridge Dictionary, Naver, Google y otros diccionarios de idiomas) en su navegador para buscar una palabra seleccionada. Cuando toca uno de estos enlaces, la palabra y la información de navegación estándar se envían a ese sitio web de terceros, que se rige por su propia política de privacidad. La propia Aplicación no envía estos datos a Wonastral.",
-                ankiTitle: "9. Integración con AnkiDroid",
-                ankiText: "Si tiene instalada la aplicación AnkiDroid y decide crear una tarjeta, la Aplicación añade la tarjeta (texto y medio opcional) a su colección de AnkiDroid en su dispositivo, a través de la propia interfaz de AnkiDroid. Se trata de una acción local, de dispositivo a dispositivo; no se envía ningún dato de las tarjetas a Wonastral. Sus datos de AnkiDroid son gestionados por AnkiDroid según sus propias condiciones.",
-                playbackTitle: "10. Reproducción en segundo plano y notificaciones",
-                playbackText: "Para permitir que la reproducción continúe mientras la Aplicación está en segundo plano, la Aplicación puede ejecutar un servicio en primer plano y mostrar una notificación de reproducción con controles multimedia. En Android 13 y versiones posteriores, la Aplicación puede solicitar permiso para mostrar notificaciones. Estas funciones operan localmente en su dispositivo y no recopilan datos personales.",
-                choicesTitle: "11. Sus opciones",
-                choicesText1: "Usted controla todas las funciones en línea opcionales: solo se utilizan cuando las activa o proporciona la clave necesaria. Puede eliminar su clave API de Groq en cualquier momento en los ajustes, y puede usar la Aplicación totalmente sin conexión con modelos en el dispositivo.",
-                choicesText2: "También puede restablecer todos los datos de la aplicación desde los ajustes («Restablecer datos de la aplicación») —lo que borra los ajustes, las claves API, los favoritos, los marcadores, las palabras guardadas, los subtítulos generados, las traducciones, el audio de síntesis de voz, las ediciones de subtítulos y los modelos descargados— o desinstalar la Aplicación en cualquier momento para eliminar todos los datos almacenados localmente.",
-                childrenTitle: "12. Privacidad de los menores",
-                childrenText: "La Aplicación no está dirigida a menores de 13 años (o la edad mínima equivalente en su jurisdicción). No recopilamos conscientemente datos personales de menores. Si cree que un menor ha facilitado información a través de uno de los servicios de terceros opcionales, póngase en contacto con nosotros para que podamos tomar las medidas oportunas.",
-                securityTitle: "13. Seguridad de los datos",
-                securityText: "Dado que la Aplicación no recopila ni almacena datos personales de nuestro lado, no existe ninguna base de datos del lado de Wonastral que pueda verse comprometida. Sus archivos, ajustes y claves API permanecen en el almacenamiento privado de la Aplicación en su dispositivo. Cualquier dato tratado por los servicios de terceros opcionales que decida utilizar (Groq, Google, alojamientos de modelos, sitios de diccionarios) está protegido por las propias medidas de seguridad de esos proveedores.",
-                changesTitle: "14. Cambios en esta política",
-                changesText: "Podemos actualizar esta Política de privacidad periódicamente para reflejar cambios en la Aplicación o en la legislación aplicable. La versión actualizada se publicará en esta página con una nueva fecha de «Última actualización». El uso continuado de la Aplicación tras un cambio supone la aceptación de la política revisada.",
-                contactTitle: "15. Contacto",
-                contactText: "Si tiene cualquier consulta sobre esta Política de privacidad o sobre la Aplicación, puede escribirnos a:",
+                effectiveLabel: "Fecha de entrada en vigor:",
+                effectiveDate: "3 de julio de 2026",
+                introText: "MultiSubPlayer, publicada por Wonastral Mapp, respeta tu privacidad. La Aplicación no recopila, almacena ni comparte ningún dato personal con el desarrollador, y no contiene análisis ni rastreo del desarrollador. La versión gratuita muestra anuncios servidos por Google AdMob (consulta la sección «Publicidad» más abajo); la mejora sin anuncios (Pro) desactiva todos los anuncios.",
+                dataTitle: "1. Datos almacenados en tu dispositivo",
+                dataText: "Todos tus datos — ajustes, marcadores, palabras guardadas, subtítulos editados o generados, modelos descargados y cualquier clave de API que introduzcas — se guardan solo en tu dispositivo y nunca se envían al desarrollador. Las claves de API se almacenan cifradas mediante Android Keystore.",
+                permTitle: "2. Permisos que solicita la aplicación",
+                permItem1: "Acceso a almacenamiento/medios — para encontrar y reproducir tus archivos de vídeo y audio y detectar los archivos de subtítulos correspondientes.",
+                permItem2: "Micrófono — se usa solo para la práctica de Hablar del modo de estudio (reconocimiento de voz). El audio no se graba en el disco ni se envía al desarrollador.",
+                permItem3: "Notificaciones y servicio en primer plano — para la reproducción en segundo plano y los controles multimedia.",
+                permItem4: "Internet — se usa solo para las funciones en línea opcionales que se describen a continuación.",
+                onlineTitle: "3. Funciones en línea opcionales (solo cuando las usas)",
+                onlineItem1a: "Generación de subtítulos y traducción de alta calidad (Groq) — al usar estas funciones, el fragmento de audio o el texto de subtítulos correspondiente se envía a través de una conexión cifrada (HTTPS) a la API de Groq, usando la clave de API que proporcionas tú. Estos datos se tratan según la política de privacidad de Groq:",
+                onlineItem1b: "El desarrollador nunca recibe, almacena ni tiene acceso a estos datos ni a tu clave de API. Si no usas estas funciones, no se envía nada.",
+                onlineItem2: "Práctica de hablar — usa el reconocimiento de voz integrado de tu dispositivo, que puede procesar el proveedor de voz de tu dispositivo (por ejemplo, Google) según la política de privacidad de dicho proveedor.",
+                onlineItem3: "Descarga de modelos — los modelos de traducción en el dispositivo (ML Kit) y de reconocimiento de voz (Whisper) se descargan de sus proveedores la primera vez que los usas. Solo se descargan archivos de modelo; no se envían datos personales.",
+                onlineItem4: "Búsquedas externas — al ejecutar una acción de diccionario, traducción o búsqueda con IA sobre el texto de un subtítulo, el texto seleccionado se envía a través de tu navegador al servicio que elijas (por ejemplo, Google Translate o ChatGPT) y se trata según la política de privacidad de ese servicio. La selección de texto usa brevemente el portapapeles del sistema; en Android 9 o anterior, otras apps podrían leerlo.",
+                ankiTitle: "4. Exportación a AnkiDroid",
+                ankiText: "Si exportas a AnkiDroid, el texto de subtítulo y el clip multimedia seleccionados se guardan en la app AnkiDroid de tu dispositivo, con tu permiso. No se envía nada al desarrollador.",
+                sharingTitle: "5. Uso compartido de datos",
+                sharingText: "El desarrollador no vende ni comparte tus datos. La única transmisión a terceros es la función opcional de Groq, iniciada por el usuario, descrita en la sección 3.",
+                childrenTitle: "6. Menores",
+                childrenText: "Esta aplicación no está dirigida a menores de 13 años y no recopila deliberadamente información personal de menores.",
+                adsTitle: "Publicidad y consentimiento (versión gratuita)",
+                adsText1a: "La versión gratuita de esta app muestra anuncios servidos por Google AdMob. AdMob puede recopilar y procesar datos como el identificador de publicidad de tu dispositivo, la dirección IP y la ubicación aproximada para publicar y medir anuncios, como se describe en la Política de privacidad de Google:",
+                adsText1b: "Puedes restablecer o eliminar tu identificador de publicidad en los ajustes del dispositivo.",
+                adsText2: "En el Espacio Económico Europeo, el Reino Unido y Suiza se muestra un formulario de consentimiento de Google (User Messaging Platform) antes de publicar anuncios personalizados, y puedes cambiar tus opciones en cualquier momento en Ajustes → Opciones de privacidad dentro de la app. Comprar la mejora sin anuncios (Pro) desactiva todos los anuncios; las compras las procesa Google Play y el desarrollador nunca recibe tus datos de pago.",
+                changesTitle: "7. Cambios en esta política",
+                changesText: "Esta política puede actualizarse a medida que evoluciona la app. La versión más reciente está siempre disponible en esta página y dentro de la app (Ajustes → Acerca de → Política de privacidad).",
+                contactTitle: "8. Contacto",
+                contactText: "Preguntas o solicitudes relacionadas con los datos:",
                 footer: "© 2026 Wonastral — Todos los derechos reservados"
             },
             de: {
@@ -622,50 +551,36 @@
                 docTitle: "MultiSubPlayer — Datenschutzerklärung",
                 title: "MultiSubPlayer",
                 subtitle: "Datenschutzerklärung",
-                lastUpdatedLabel: "Zuletzt aktualisiert:",
-                lastUpdatedDate: "18. Juli 2026",
-                introTitle: "1. Einleitung",
-                introText: "Diese Datenschutzerklärung beschreibt, wie die mobile Anwendung „MultiSubPlayer\" (die „App\"), herausgegeben von Wonastral, Informationen verarbeitet, wenn Sie sie auf einem Android-Gerät nutzen. MultiSubPlayer ist ein Medienplayer und ein Werkzeug zum Sprachenlernen, mit dem Sie Ihre eigenen Video- und Audiodateien mit Untertiteln ansehen oder anhören, Untertitel erzeugen und übersetzen, die Sprachausgabe nutzen, Wörter nachschlagen und AnkiDroid-Karten erstellen können. Mit der Installation oder Nutzung der App stimmen Sie den nachfolgend beschriebenen Praktiken zu.",
-                noDataTitle: "2. Kein Konto und keine Datenerhebung durch den Entwickler",
-                noDataText1: "Die App erfordert kein Konto und erhebt, speichert oder teilt auf unserer Seite keinerlei personenbezogene Daten über Sie. Wir fragen weder Ihren Namen, Ihre E-Mail-Adresse noch Ihre Telefonnummer ab. Die App enthält keine Werbung, keine Analyse- oder Tracking-SDKs und keine Drittanbieter-Tools zur Absturzberichterstattung.",
-                noDataText2: "Wonastral betreibt für diese App keinen Server. Wir erhalten niemals Ihre Mediendateien, Untertitel, Einstellungen oder Nutzungsdaten.",
-                localTitle: "3. Lokal auf Ihrem Gerät gespeicherte Daten",
-                localText1: "Alles, was die App erstellt oder sich merkt, wird lokal auf Ihrem Gerät im privaten Speicher der App abgelegt. Dazu gehören:",
-                localItem1: "App-Einstellungen und Präferenzen (Sprache, Wiedergabe- und Anzeigeoptionen);",
-                localItem2: "API-Schlüssel, die Sie eingeben (zum Beispiel Ihr Groq-API-Schlüssel);",
-                localItem3: "Favoriten, Lesezeichen und gespeicherte Wörter;",
-                localItem4: "Erzeugte Untertitel, Übersetzungen und Sprachausgabe-Audio;",
-                localItem5: "Ihre Untertitelbearbeitungen und Synchronisierungsanpassungen;",
-                localItem6: "Spracherkennungs- und Sprachausgabemodelle, die Sie herunterladen.",
-                localText2: "Diese Informationen verbleiben auf Ihrem Gerät, werden niemals an uns übermittelt und können jederzeit in den Einstellungen der App („App-Daten zurücksetzen\") oder durch Deinstallation der App gelöscht werden.",
-                filesTitle: "4. Medien- und Untertiteldateien",
-                filesText1: "Die App gibt Video- und Audiodateien wieder, die Sie bereits auf Ihrem Gerät haben, und liest die zugehörigen Untertiteldateien. Dazu fordert die App Zugriff auf Medien und Dateien auf Ihrem Gerät an. Der umfassende Dateizugriff („Zugriff auf alle Dateien\") dient ausschließlich dazu, Untertiteldateien automatisch zu erkennen, die zum Namen der geöffneten Mediendatei passen. Ihre Dateien werden lokal gelesen und verarbeitet und auf keinen Wonastral-Server hochgeladen.",
-                filesText2: "Die App verwendet nicht das Mikrofon. Die Spracherkennung arbeitet mit dem Audio, das in der von Ihnen geöffneten Mediendatei enthalten ist, nicht mit einer Live-Aufnahme.",
-                groqTitle: "5. Optionale Online-Funktion — Groq-API (Untertitelerstellung & Übersetzung)",
-                groqText1: "Die App bietet optionale Funktionen, die Groq nutzen, einen von Groq, Inc. betriebenen KI-Dienst, um Untertitel aus dem Audio einer Mediendatei zu erzeugen (Spracherkennung) und hochwertige Übersetzungen zu erstellen. Diese Funktionen sind optional und arbeiten nach dem Prinzip „Bring your own key\": Sie werden nur ausgeführt, wenn Sie Ihren eigenen kostenlosen Groq-API-Schlüssel beschaffen und in den Einstellungen der App eingeben.",
-                groqText2: "Wenn Sie diese Funktionen nutzen, werden die betreffenden Daten mit Ihrem eigenen Schlüssel direkt von Ihrem Gerät an die Server von Groq gesendet: kurze Audiosegmente, die aus dem von Ihnen ausgewählten Medium extrahiert werden (für die Untertitelerstellung), und Untertiteltext (für die Übersetzung). Diese Daten werden von Groq verarbeitet, um die Transkription oder Übersetzung zurückzugeben, und unterliegen der eigenen Datenschutzerklärung von Groq.",
-                groqText3: "Wenn Sie niemals einen Groq-API-Schlüssel eingeben, werden keine Audio- oder Textdaten an Groq gesendet. Einen Schlüssel erhalten Sie unter console.groq.com/keys, und die Praktiken von Groq können Sie unter groq.com/privacy-policy einsehen.",
-                gtransTitle: "6. Optionale Online-Funktion — Google Übersetzer",
-                gtransText: "Als alternative Übersetzungsoption kann die App Untertitel oder ausgewählten Text an Google Übersetzer (einen von Google LLC betriebenen Dienst) senden, um eine Übersetzung zu erhalten. Dies geschieht nur, wenn Sie diese Option wählen. Der von Ihnen übersetzte Text wird von Google gemäß dessen Datenschutzerklärung verarbeitet, abrufbar unter policies.google.com/privacy.",
-                modelsTitle: "7. Optionale Sprachmodelle auf dem Gerät",
-                modelsText: "Für Offline-Spracherkennung und -Sprachausgabe kann die App Open-Source-Modelle herunterladen (zum Beispiel von GitHub und Hugging Face). Es werden nur die Modelldateien heruntergeladen; nach der Installation laufen Transkription und Sprachsynthese vollständig auf Ihrem Gerät, und es werden keine Audio- oder Textdaten an diese Dienste gesendet. Der Download eines Modells umfasst eine Standardanfrage an den Hosting-Anbieter, der im Rahmen der Bereitstellung der Datei technische Informationen wie Ihre IP-Adresse verarbeiten kann.",
-                dictTitle: "8. Wörterbuch- und Websuche-Links",
-                dictText: "Die App kann externe Wörterbuch- und Such-Websites (zum Beispiel Cambridge Dictionary, Naver, Google und andere Sprachwörterbücher) in Ihrem Browser öffnen, um ein ausgewähltes Wort nachzuschlagen. Wenn Sie auf einen solchen Link tippen, werden das Wort und übliche Browsing-Informationen an diese Drittanbieter-Website gesendet, die ihrer eigenen Datenschutzerklärung unterliegt. Die App selbst sendet diese Daten nicht an Wonastral.",
-                ankiTitle: "9. AnkiDroid-Integration",
-                ankiText: "Wenn die App AnkiDroid installiert ist und Sie eine Karte erstellen möchten, fügt die App die Karte (Text und optionales Medium) über die eigene Schnittstelle von AnkiDroid zu Ihrer AnkiDroid-Sammlung auf Ihrem Gerät hinzu. Dies ist ein lokaler Vorgang von Gerät zu Gerät; es werden keine Kartendaten an Wonastral gesendet. Ihre AnkiDroid-Daten werden von AnkiDroid gemäß dessen eigenen Bedingungen verarbeitet.",
-                playbackTitle: "10. Hintergrundwiedergabe und Benachrichtigungen",
-                playbackText: "Damit die Wiedergabe fortgesetzt werden kann, während sich die App im Hintergrund befindet, kann die App einen Vordergrunddienst ausführen und eine Wiedergabebenachrichtigung mit Mediensteuerung anzeigen. Unter Android 13 und höher kann die App um die Erlaubnis bitten, Benachrichtigungen anzuzeigen. Diese Funktionen arbeiten lokal auf Ihrem Gerät und erheben keine personenbezogenen Daten.",
-                choicesTitle: "11. Ihre Wahlmöglichkeiten",
-                choicesText1: "Sie steuern alle optionalen Online-Funktionen: Sie werden nur genutzt, wenn Sie sie aktivieren oder den erforderlichen Schlüssel bereitstellen. Sie können Ihren Groq-API-Schlüssel jederzeit in den Einstellungen entfernen und die App mit Modellen auf dem Gerät vollständig offline nutzen.",
-                choicesText2: "Sie können außerdem alle App-Daten in den Einstellungen zurücksetzen („App-Daten zurücksetzen\") — wodurch Einstellungen, API-Schlüssel, Favoriten, Lesezeichen, gespeicherte Wörter, erzeugte Untertitel, Übersetzungen, Sprachausgabe-Audio, Untertitelbearbeitungen und heruntergeladene Modelle gelöscht werden — oder die App jederzeit deinstallieren, um alle lokal gespeicherten Daten zu entfernen.",
-                childrenTitle: "12. Datenschutz bei Kindern",
-                childrenText: "Die App richtet sich nicht an Kinder unter 13 Jahren (bzw. das entsprechende Mindestalter in Ihrer Rechtsordnung). Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Sollten Sie der Auffassung sein, dass ein Kind über einen der optionalen Drittanbieterdienste Informationen übermittelt hat, kontaktieren Sie uns bitte, damit wir geeignete Maßnahmen ergreifen können.",
-                securityTitle: "13. Datensicherheit",
-                securityText: "Da die App auf unserer Seite keine personenbezogenen Daten erhebt oder speichert, existiert keine Datenbank auf Seiten von Wonastral, die kompromittiert werden könnte. Ihre Dateien, Einstellungen und API-Schlüssel verbleiben im privaten Speicher der App auf Ihrem Gerät. Alle Daten, die von den optionalen Drittanbieterdiensten verarbeitet werden, die Sie nutzen (Groq, Google, Modell-Hoster, Wörterbuchseiten), unterliegen den eigenen Sicherheitsmaßnahmen dieser Anbieter.",
-                changesTitle: "14. Änderungen dieser Erklärung",
-                changesText: "Wir können diese Datenschutzerklärung gelegentlich aktualisieren, um Änderungen der App oder der geltenden Rechtslage Rechnung zu tragen. Die aktualisierte Fassung wird auf dieser Seite mit einem neuen Datum unter „Zuletzt aktualisiert\" veröffentlicht. Die fortgesetzte Nutzung der App nach einer Änderung gilt als Annahme der überarbeiteten Erklärung.",
-                contactTitle: "15. Kontakt",
-                contactText: "Bei Fragen zu dieser Datenschutzerklärung oder zur App erreichen Sie uns unter:",
+                effectiveLabel: "Gültig ab:",
+                effectiveDate: "3. Juli 2026",
+                introText: "MultiSubPlayer, herausgegeben von Wonastral Mapp, respektiert Ihre Privatsphäre. Die App erhebt, speichert oder teilt keine personenbezogenen Informationen mit dem Entwickler und enthält keine Analyse- oder Tracking-Tools des Entwicklers. Die kostenlose Version zeigt von Google AdMob ausgelieferte Werbung an (siehe den Abschnitt „Werbung\" weiter unten); das werbefreie Pro-Upgrade deaktiviert alle Anzeigen.",
+                dataTitle: "1. Auf Ihrem Gerät gespeicherte Daten",
+                dataText: "Alle Ihre Daten — App-Einstellungen, Lesezeichen, gespeicherte Wörter, bearbeitete oder erzeugte Untertitel, heruntergeladene Modelle und alle von Ihnen eingegebenen API-Schlüssel — werden ausschließlich auf Ihrem Gerät gespeichert. Sie werden niemals an den Entwickler gesendet. API-Schlüssel werden mit dem Android Keystore verschlüsselt gespeichert.",
+                permTitle: "2. Von der App angeforderte Berechtigungen",
+                permItem1: "Speicher-/Medienzugriff — um Ihre Video- und Audiodateien zu finden und abzuspielen und passende Untertiteldateien zu erkennen.",
+                permItem2: "Mikrofon — wird ausschließlich für die Sprechübung im Lernmodus (Spracherkennung) verwendet. Audio wird nicht auf dem Datenträger gespeichert und nicht an den Entwickler gesendet.",
+                permItem3: "Benachrichtigungen & Vordergrunddienst — für die Hintergrundwiedergabe und die Mediensteuerung.",
+                permItem4: "Internet — wird nur für die unten beschriebenen optionalen Online-Funktionen verwendet.",
+                onlineTitle: "3. Optionale Online-Funktionen (nur wenn Sie sie nutzen)",
+                onlineItem1a: "Untertitelerstellung und hochwertige Übersetzung (Groq) — wenn Sie diese Funktionen nutzen, wird der betreffende Audioausschnitt oder Untertiteltext über eine verschlüsselte Verbindung (HTTPS) mit dem von Ihnen bereitgestellten API-Schlüssel an die Groq-API gesendet. Diese Daten werden gemäß der Datenschutzerklärung von Groq verarbeitet:",
+                onlineItem1b: "Der Entwickler erhält, speichert oder sieht diese Daten oder Ihren API-Schlüssel niemals. Wenn Sie diese Funktionen nicht nutzen, wird nichts gesendet.",
+                onlineItem2: "Sprechübung — nutzt die integrierte Spracherkennung Ihres Geräts, die möglicherweise vom Sprachanbieter Ihres Geräts (zum Beispiel Google) gemäß dessen Datenschutzerklärung verarbeitet wird.",
+                onlineItem3: "Modell-Downloads — Modelle für die geräteinterne Übersetzung (ML Kit) und Spracherkennung (Whisper) werden bei der ersten Nutzung von ihren Anbietern heruntergeladen. Es werden nur Modelldateien heruntergeladen; es werden keine personenbezogenen Daten gesendet.",
+                onlineItem4: "Externe Nachschlagevorgänge — wenn Sie für einen Untertiteltext eine Wörterbuch-, Übersetzungs- oder KI-Suchaktion ausführen, wird der ausgewählte Text über Ihren Browser an den von Ihnen gewählten Dienst (zum Beispiel Google Übersetzer oder ChatGPT) übergeben und gemäß dessen Datenschutzerklärung verarbeitet. Die Textauswahl nutzt kurzzeitig die System-Zwischenablage, die unter Android 9 oder älter von anderen Apps gelesen werden könnte.",
+                ankiTitle: "4. AnkiDroid-Export",
+                ankiText: "Wenn Sie nach AnkiDroid exportieren, werden der ausgewählte Untertiteltext und der Medienclip mit Ihrer Erlaubnis in die AnkiDroid-App auf Ihrem Gerät gespeichert. Es wird nichts an den Entwickler gesendet.",
+                sharingTitle: "5. Weitergabe von Daten",
+                sharingText: "Der Entwickler verkauft oder teilt Ihre Daten nicht. Die einzige Übermittlung an Dritte ist die optionale, von Ihnen ausgelöste Groq-Funktion, die in Abschnitt 3 beschrieben ist.",
+                childrenTitle: "6. Kinder",
+                childrenText: "Diese App richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine personenbezogenen Daten von Kindern.",
+                adsTitle: "Werbung und Einwilligung (kostenlose Version)",
+                adsText1a: "Die kostenlose Version dieser App zeigt von Google AdMob ausgelieferte Werbung an. AdMob kann Daten wie die Werbe-ID Ihres Geräts, Ihre IP-Adresse und Ihren ungefähren Standort erheben und verarbeiten, um Anzeigen auszuliefern und zu messen, wie in der Datenschutzerklärung von Google beschrieben:",
+                adsText1b: "Sie können Ihre Werbe-ID in den Einstellungen Ihres Geräts zurücksetzen oder löschen.",
+                adsText2: "Wenn Sie sich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befinden, wird vor der Auslieferung personalisierter Werbung ein Google-Einwilligungsformular (User Messaging Platform) angezeigt, und Sie können Ihre Auswahl jederzeit in Einstellungen → Datenschutzoptionen innerhalb der App ändern. Der Kauf des werbefreien Pro-Upgrades deaktiviert alle Anzeigen; Käufe werden von Google Play abgewickelt, und der Entwickler erhält niemals Ihre Zahlungsdaten.",
+                changesTitle: "7. Änderungen dieser Erklärung",
+                changesText: "Diese Erklärung kann im Zuge der Weiterentwicklung der App aktualisiert werden. Die aktuellste Fassung ist stets auf dieser Seite und in der App (Einstellungen → Über → Datenschutzerklärung) verfügbar.",
+                contactTitle: "8. Kontakt",
+                contactText: "Fragen oder datenbezogene Anliegen:",
                 footer: "© 2026 Wonastral — Alle Rechte vorbehalten"
             },
             it: {
@@ -673,50 +588,36 @@
                 docTitle: "MultiSubPlayer — Informativa sulla privacy",
                 title: "MultiSubPlayer",
                 subtitle: "Informativa sulla privacy",
-                lastUpdatedLabel: "Ultimo aggiornamento:",
-                lastUpdatedDate: "18 luglio 2026",
-                introTitle: "1. Introduzione",
-                introText: "La presente Informativa sulla privacy descrive in che modo l'applicazione mobile «MultiSubPlayer» (l'«App»), pubblicata da Wonastral, gestisce le informazioni quando la utilizzi su un dispositivo Android. MultiSubPlayer è un lettore multimediale e uno strumento per l'apprendimento delle lingue che ti consente di guardare o ascoltare i tuoi file video e audio con sottotitoli, generare e tradurre sottotitoli, usare la sintesi vocale, cercare parole e creare schede AnkiDroid. Installando o utilizzando l'App, accetti le pratiche descritte di seguito.",
-                noDataTitle: "2. Nessun account e nessun dato raccolto dallo sviluppatore",
-                noDataText1: "L'App non richiede un account e non raccoglie, memorizza o condivide alcun dato personale che ti riguardi dal nostro lato. Non chiediamo il tuo nome, l'indirizzo e-mail o il numero di telefono. L'App non contiene pubblicità, né SDK di analisi o tracciamento, né strumenti di terze parti per la segnalazione degli arresti anomali.",
-                noDataText2: "Wonastral non gestisce alcun server per questa App. Non riceviamo mai i tuoi file multimediali, i sottotitoli, le impostazioni o i dati di utilizzo.",
-                localTitle: "3. Dati memorizzati localmente sul tuo dispositivo",
-                localText1: "Tutto ciò che l'App crea o memorizza viene conservato localmente sul tuo dispositivo, nell'archiviazione privata dell'App. Ciò include:",
-                localItem1: "Impostazioni e preferenze dell'App (lingua, opzioni di riproduzione e visualizzazione);",
-                localItem2: "Le chiavi API che inserisci (ad esempio la tua chiave API Groq);",
-                localItem3: "Preferiti, segnalibri e parole salvate;",
-                localItem4: "Sottotitoli generati, traduzioni e audio della sintesi vocale;",
-                localItem5: "Le tue modifiche ai sottotitoli e le regolazioni di sincronizzazione;",
-                localItem6: "I modelli di riconoscimento vocale e di sintesi vocale che scegli di scaricare.",
-                localText2: "Queste informazioni restano sul tuo dispositivo, non ci vengono mai trasmesse e possono essere cancellate in qualsiasi momento dalle impostazioni dell'App («Ripristina dati dell'app») o disinstallando l'App.",
-                filesTitle: "4. File multimediali e di sottotitoli",
-                filesText1: "L'App riproduce file video e audio che hai già sul tuo dispositivo e legge i file di sottotitoli associati. A tale scopo, l'App richiede l'accesso ai file multimediali e ai file sul tuo dispositivo. L'accesso esteso ai file («Accesso a tutti i file») viene utilizzato solo per rilevare automaticamente i file di sottotitoli che corrispondono al nome del contenuto multimediale che apri. I tuoi file vengono letti ed elaborati localmente e non vengono caricati su alcun server di Wonastral.",
-                filesText2: "L'App non utilizza il microfono. Il riconoscimento vocale opera sull'audio contenuto nel file multimediale che apri, non su una registrazione dal vivo.",
-                groqTitle: "5. Funzione online facoltativa — API Groq (generazione e traduzione di sottotitoli)",
-                groqText1: "L'App offre funzioni facoltative che utilizzano Groq, un servizio di IA gestito da Groq, Inc., per generare sottotitoli dall'audio di un file multimediale (riconoscimento vocale) e per produrre traduzioni di alta qualità. Queste funzioni sono facoltative e funzionano secondo il principio «porta la tua chiave»: vengono eseguite solo se ottieni la tua chiave API Groq gratuita e la inserisci nelle impostazioni dell'App.",
-                groqText2: "Quando utilizzi queste funzioni, i dati pertinenti vengono inviati direttamente dal tuo dispositivo ai server di Groq utilizzando la tua chiave: brevi segmenti audio estratti dal contenuto multimediale che hai selezionato (per la generazione dei sottotitoli) e il testo dei sottotitoli (per la traduzione). Questi dati sono trattati da Groq per restituire la trascrizione o la traduzione e sono soggetti alla stessa informativa sulla privacy di Groq.",
-                groqText3: "Se non inserisci mai una chiave API Groq, nessun audio o testo viene mai inviato a Groq. Puoi ottenere una chiave su console.groq.com/keys e consultare le pratiche di Groq su groq.com/privacy-policy.",
-                gtransTitle: "6. Funzione online facoltativa — Google Traduttore",
-                gtransText: "Come opzione di traduzione alternativa, l'App può inviare i sottotitoli o il testo selezionato a Google Traduttore (un servizio gestito da Google LLC) per ottenere una traduzione. Ciò avviene solo quando scegli questa opzione. Il testo che traduci è trattato da Google in base alla propria informativa sulla privacy, disponibile all'indirizzo policies.google.com/privacy.",
-                modelsTitle: "7. Modelli vocali facoltativi sul dispositivo",
-                modelsText: "Per il riconoscimento vocale e la sintesi vocale offline, l'App può scaricare modelli open source (ad esempio da GitHub e Hugging Face). Vengono scaricati solo i file dei modelli; una volta installati, la trascrizione e la sintesi vocale vengono eseguite interamente sul tuo dispositivo e nessun audio o testo viene inviato a tali servizi. Il download di un modello comporta una richiesta standard al provider di hosting, che può trattare informazioni tecniche come il tuo indirizzo IP nell'ambito della consegna del file.",
-                dictTitle: "8. Collegamenti a dizionari e ricerche web",
-                dictText: "L'App può aprire siti web esterni di dizionari e di ricerca (ad esempio Cambridge Dictionary, Naver, Google e altri dizionari di lingue) nel tuo browser per cercare una parola selezionata. Quando tocchi uno di questi collegamenti, la parola e le informazioni di navigazione standard vengono inviate a quel sito web di terze parti, disciplinato dalla propria informativa sulla privacy. L'App stessa non invia questi dati a Wonastral.",
-                ankiTitle: "9. Integrazione con AnkiDroid",
-                ankiText: "Se hai installato l'app AnkiDroid e scegli di creare una scheda, l'App aggiunge la scheda (testo ed eventuale contenuto multimediale) alla tua raccolta AnkiDroid sul tuo dispositivo, tramite l'interfaccia di AnkiDroid stessa. Si tratta di un'azione locale, da dispositivo a dispositivo; nessun dato delle schede viene inviato a Wonastral. I tuoi dati AnkiDroid sono gestiti da AnkiDroid secondo i propri termini.",
-                playbackTitle: "10. Riproduzione in background e notifiche",
-                playbackText: "Per consentire alla riproduzione di continuare mentre l'App è in background, l'App può eseguire un servizio in primo piano e mostrare una notifica di riproduzione con i controlli multimediali. Su Android 13 e versioni successive, l'App può chiedere l'autorizzazione a mostrare notifiche. Queste funzioni operano localmente sul tuo dispositivo e non raccolgono dati personali.",
-                choicesTitle: "11. Le tue scelte",
-                choicesText1: "Controlli tu tutte le funzioni online facoltative: vengono utilizzate solo quando le attivi o fornisci la chiave necessaria. Puoi rimuovere la tua chiave API Groq in qualsiasi momento nelle impostazioni e puoi utilizzare l'App completamente offline con i modelli sul dispositivo.",
-                choicesText2: "Puoi anche ripristinare tutti i dati dell'app dalle impostazioni («Ripristina dati dell'app») — operazione che cancella impostazioni, chiavi API, preferiti, segnalibri, parole salvate, sottotitoli generati, traduzioni, audio della sintesi vocale, modifiche ai sottotitoli e modelli scaricati — oppure disinstallare l'App in qualsiasi momento per rimuovere tutti i dati memorizzati localmente.",
-                childrenTitle: "12. Privacy dei minori",
-                childrenText: "L'App non è destinata a bambini di età inferiore a 13 anni (o all'età minima equivalente nella tua giurisdizione). Non raccogliamo consapevolmente dati personali di minori. Se ritieni che un minore abbia fornito informazioni tramite uno dei servizi di terze parti facoltativi, contattaci affinché possiamo intraprendere le azioni opportune.",
-                securityTitle: "13. Sicurezza dei dati",
-                securityText: "Poiché l'App non raccoglie né memorizza dati personali dal nostro lato, non esiste alcun database lato Wonastral che possa essere compromesso. I tuoi file, le impostazioni e le chiavi API restano nell'archiviazione privata dell'App sul tuo dispositivo. Eventuali dati trattati dai servizi di terze parti facoltativi che scegli di utilizzare (Groq, Google, host dei modelli, siti di dizionari) sono protetti dalle misure di sicurezza adottate da tali fornitori.",
-                changesTitle: "14. Modifiche alla presente informativa",
-                changesText: "Potremmo aggiornare di volta in volta la presente Informativa sulla privacy per riflettere modifiche dell'App o della normativa applicabile. La versione aggiornata sarà pubblicata su questa pagina con una nuova data di «Ultimo aggiornamento». L'uso continuato dell'App dopo una modifica comporta l'accettazione dell'informativa rivista.",
-                contactTitle: "15. Contatti",
-                contactText: "Per qualsiasi domanda sulla presente Informativa sulla privacy o sull'App, puoi scriverci a:",
+                effectiveLabel: "Data di entrata in vigore:",
+                effectiveDate: "3 luglio 2026",
+                introText: "MultiSubPlayer, pubblicata da Wonastral Mapp, rispetta la tua privacy. L'App non raccoglie, non memorizza e non condivide i tuoi dati personali con lo sviluppatore e non contiene strumenti di analisi o tracciamento dello sviluppatore. La versione gratuita mostra annunci forniti da Google AdMob (vedi la sezione «Pubblicità» di seguito); l'upgrade Pro (rimozione degli annunci) disattiva tutti gli annunci.",
+                dataTitle: "1. Dati memorizzati sul tuo dispositivo",
+                dataText: "Tutti i tuoi dati — impostazioni dell'app, segnalibri, parole salvate, sottotitoli modificati o generati, modelli scaricati e qualsiasi chiave API che inserisci — sono memorizzati solo sul tuo dispositivo. Non vengono mai inviati allo sviluppatore. Le chiavi API sono memorizzate cifrate a riposo tramite Android Keystore.",
+                permTitle: "2. Autorizzazioni richieste dall'app",
+                permItem1: "Accesso ad archiviazione/media — per trovare e riprodurre i tuoi file video e audio e rilevare i file di sottotitoli corrispondenti.",
+                permItem2: "Microfono — utilizzato solo per l'esercizio di conversazione della modalità Studio (riconoscimento vocale). L'audio non viene registrato su disco né inviato allo sviluppatore.",
+                permItem3: "Notifiche e servizio in primo piano — per la riproduzione in background e i controlli multimediali.",
+                permItem4: "Internet — utilizzato solo per le funzioni online facoltative descritte di seguito.",
+                onlineTitle: "3. Funzioni online facoltative (solo quando le usi)",
+                onlineItem1a: "Generazione di sottotitoli e traduzione di alta qualità (Groq) — quando utilizzi queste funzioni, l'estratto audio o il testo dei sottotitoli pertinente viene inviato tramite una connessione cifrata (HTTPS) all'API Groq, utilizzando la chiave API che fornisci tu. Questi dati sono trattati in base all'informativa sulla privacy di Groq:",
+                onlineItem1b: "Lo sviluppatore non riceve, non memorizza e non ha mai accesso a questi dati né alla tua chiave API. Se non utilizzi queste funzioni, non viene inviato nulla.",
+                onlineItem2: "Esercizio di conversazione — utilizza il riconoscimento vocale integrato del tuo dispositivo, che può essere elaborato dal fornitore di riconoscimento vocale del dispositivo (ad esempio Google), secondo l'informativa sulla privacy di tale fornitore.",
+                onlineItem3: "Download dei modelli — i modelli per la traduzione sul dispositivo (ML Kit) e per il riconoscimento vocale (Whisper) vengono scaricati dai rispettivi fornitori al primo utilizzo. Vengono scaricati solo i file dei modelli; non viene inviato alcun dato personale.",
+                onlineItem4: "Ricerche esterne — quando esegui un'azione di dizionario, traduzione o ricerca con IA sul testo di un sottotitolo, il testo selezionato viene trasmesso tramite il tuo browser al servizio che hai scelto (ad esempio Google Traduttore o ChatGPT) e trattato secondo l'informativa sulla privacy di tale servizio. La selezione del testo utilizza brevemente gli appunti di sistema, che su Android 9 o versioni precedenti potrebbero essere letti da altre app.",
+                ankiTitle: "4. Esportazione in AnkiDroid",
+                ankiText: "Se esporti in AnkiDroid, il testo del sottotitolo e il clip multimediale selezionati vengono salvati nell'app AnkiDroid sul tuo dispositivo, con il tuo permesso. Non viene inviato nulla allo sviluppatore.",
+                sharingTitle: "5. Condivisione dei dati",
+                sharingText: "Lo sviluppatore non vende né condivide i tuoi dati. L'unica trasmissione a terze parti è la funzione Groq facoltativa, avviata dall'utente, descritta nella sezione 3.",
+                childrenTitle: "6. Minori",
+                childrenText: "Questa app non è destinata ai minori di 13 anni e non raccoglie consapevolmente informazioni personali dai minori.",
+                adsTitle: "Pubblicità e consenso (versione gratuita)",
+                adsText1a: "La versione gratuita di questa app mostra annunci forniti da Google AdMob. AdMob può raccogliere e trattare dati come l'identificatore pubblicitario del tuo dispositivo, l'indirizzo IP e la posizione approssimativa per pubblicare e misurare gli annunci, come descritto nell'informativa sulla privacy di Google:",
+                adsText1b: "Puoi reimpostare o eliminare il tuo identificatore pubblicitario nelle impostazioni del dispositivo.",
+                adsText2: "Se ti trovi nello Spazio economico europeo, nel Regno Unito o in Svizzera, prima della pubblicazione di annunci personalizzati viene mostrato un modulo di consenso Google (User Messaging Platform), e puoi modificare le tue scelte in qualsiasi momento in Impostazioni → Opzioni sulla privacy all'interno dell'app. L'acquisto dell'upgrade Pro (rimozione degli annunci) disattiva tutti gli annunci; gli acquisti sono gestiti da Google Play e lo sviluppatore non riceve mai i tuoi dati di pagamento.",
+                changesTitle: "7. Modifiche alla presente informativa",
+                changesText: "La presente informativa può essere aggiornata con l'evoluzione dell'app. La versione più recente è sempre disponibile in questa pagina e all'interno dell'app (Impostazioni → Informazioni → Informativa sulla privacy).",
+                contactTitle: "8. Contatti",
+                contactText: "Domande o richieste relative ai dati:",
                 footer: "© 2026 Wonastral — Tutti i diritti riservati"
             }
         };
