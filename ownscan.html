@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>OwnScan — Privacy Policy</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f4e 50%, #2d1b69 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem 3rem;
+            overflow-x: clip;
+        }
+
+        html {
+            overflow-x: clip;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.6);
+            opacity: 0;
+            will-change: opacity, transform;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.6);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.8);
+            animation: shoot 8s linear infinite;
+            opacity: 0;
+        }
+
+        .shooting-star::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+            transform: translateX(-80px);
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translate(0, 0) rotate(20deg);
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            15% {
+                opacity: 1;
+            }
+            25%, 100% {
+                transform: translate(400px, 150px) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            width: 100%;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-family: 'Comfortaa', 'Nunito', sans-serif;
+            font-size: clamp(2.25rem, 6vw, 3.75rem);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #fff 0%, #b8a4ff 50%, #8a5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 0.4rem;
+        }
+
+        .last-updated {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .policy {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 2.25rem 2rem;
+        }
+
+        .policy section + section {
+            margin-top: 1.75rem;
+        }
+
+        .policy h2 {
+            font-family: 'Comfortaa', 'Nunito', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #b8a4ff;
+        }
+
+        .policy p,
+        .policy li {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .policy p + p {
+            margin-top: 0.75rem;
+        }
+
+        .policy ul {
+            margin-top: 0.5rem;
+            padding-left: 1.25rem;
+        }
+
+        .policy li + li {
+            margin-top: 0.35rem;
+        }
+
+        .policy a {
+            color: #b8a4ff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(184, 164, 255, 0.4);
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .policy a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 10;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            overflow: hidden;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .lang-toggle:hover {
+            transform: scale(1.08);
+            border-color: rgba(138, 92, 246, 0.6);
+            box-shadow: 0 0 20px rgba(138, 92, 246, 0.4);
+        }
+
+        .lang-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .lang-toggle svg {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: block;
+            transition: opacity 0.25s ease;
+        }
+
+        .lang-menu {
+            position: fixed;
+            top: 5.5rem;
+            right: 1.5rem;
+            z-index: 10;
+            background: rgba(20, 22, 50, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 0.5rem;
+            min-width: 180px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(-8px) scale(0.96);
+            transform-origin: top right;
+            pointer-events: none;
+            transition: opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .lang-menu.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.2s ease;
+        }
+
+        .lang-option:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .lang-option.active {
+            background: rgba(138, 92, 246, 0.2);
+            color: #fff;
+        }
+
+        .lang-option svg {
+            width: 24px;
+            height: 16px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .lang-toggle:focus-visible,
+        .lang-option:focus-visible {
+            outline: 2px solid #b8a4ff;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .container,
+            .shooting-star {
+                animation: none !important;
+            }
+
+            .star {
+                animation: none !important;
+                opacity: 0.7 !important;
+                transform: scale(1) !important;
+            }
+
+            * {
+                transition-duration: 0.001ms !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5rem 1rem 2rem;
+            }
+
+            .policy {
+                padding: 1.5rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <button class="lang-toggle" id="langToggle" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+        <span id="flagSlot"></span>
+    </button>
+
+    <div class="lang-menu" id="langMenu" role="menu"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 data-i18n="title">OwnScan</h1>
+            <p class="subtitle" data-i18n="subtitle">Privacy Policy</p>
+            <p class="last-updated"><span data-i18n="lastUpdatedLabel">Last updated:</span> <span data-i18n="lastUpdatedDate">October 14, 2026</span></p>
+        </div>
+
+        <div class="policy">
+            <section>
+                <h2 data-i18n="introTitle">1. Introduction</h2>
+                <p data-i18n="introText">This Privacy Policy describes how the Android app "OwnScan" (the "App"), published by Wonastral, handles information when you use it. OwnScan turns paper documents into PDF files. It was designed so that your documents stay yours: they are processed and stored on your phone, not on our servers.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="summaryTitle">2. In Short</h2>
+                <ul>
+                    <li data-i18n="summary1">No account, no sign-up, no email address requested.</li>
+                    <li data-i18n="summary2">Your scans, the recognized text and your signature are stored only on your device.</li>
+                    <li data-i18n="summary3">Wonastral operates no server for this App and receives none of your documents.</li>
+                    <li data-i18n="summary4">The free version shows an ad banner from Google AdMob, with your consent where the law requires it. The ad-free version loads no advertising component at all.</li>
+                    <li data-i18n="summary5">You can delete all your data at any time from the App's settings.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 data-i18n="localTitle">3. Your Documents Stay on Your Device</h2>
+                <p data-i18n="localText1">The pages you scan or import, the PDF files produced, the text recognized in them, your saved signature and your settings are stored in the App's private storage on your device. Other apps cannot read them, and they are never sent to Wonastral.</p>
+                <p data-i18n="localText2">They are kept until you delete them. You can delete a page, a document, or everything at once (Settings → Privacy → Delete all my data). Uninstalling the App also deletes them.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="scanTitle">4. Camera and Text Recognition</h2>
+                <p data-i18n="scanText">Pages are captured with the document scanner provided by Google Play services; the App itself does not request the camera permission. Edge detection, filters, PDF creation and text recognition (Google ML Kit, with a model embedded in the App) all run on your device, without an internet connection. The content of your images and texts is never sent online.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="techTitle">5. Technical Data From Google Components</h2>
+                <p data-i18n="techText1">Like any app using them, the Google components embedded in OwnScan (ML Kit and Google Play services) may send Google limited technical information to measure their reliability: device model, Android version, app version, performance metrics, error codes and an identifier specific to this installation. This information never includes the content of your documents. It is encrypted in transit and is not shared with third parties.</p>
+                <p data-i18n-html="techText2">Details: <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">developers.google.com/ml-kit/android-data-disclosure</a> and Google's privacy policy, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="adsTitle">6. Advertising — Google AdMob</h2>
+                <p data-i18n="adsText1">The free version displays a banner at the bottom of the screen, served by Google AdMob, a service of Google LLC. There are no full-screen ads. AdMob is an independent third party that may process certain information to serve ads, including personalized ads where you have agreed to it.</p>
+                <p data-i18n="adsText2">Depending on your consent and device settings, AdMob may process:</p>
+                <ul>
+                    <li data-i18n="adsItem1">your Android advertising ID (a resettable identifier);</li>
+                    <li data-i18n="adsItem2">your IP address and the approximate location derived from it;</li>
+                    <li data-i18n="adsItem3">device information (model, Android version, language);</li>
+                    <li data-i18n="adsItem4">interactions with ads (impressions, clicks).</li>
+                </ul>
+                <p data-i18n-html="adsText3">This data is processed by Google under its own privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>. AdMob-specific details: <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">support.google.com/admob/answer/6128543</a>.</p>
+                <p data-i18n="adsText4">In the European Economic Area, the United Kingdom and Switzerland, the App asks for your consent through Google's consent form before the advertising component starts. You can change or withdraw your choice at any time in Settings → Privacy → Manage ad consent. If you refuse, the App works exactly the same; only non-personalized ads may be shown.</p>
+                <p data-i18n="adsText5">If you buy the ad-free version, the advertising component is never started: no ad request is made and the advertising ID is not read.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="purchaseTitle">7. In-App Purchase</h2>
+                <p data-i18n="purchaseText">The ad-free version is a one-time purchase processed by Google Play. Wonastral never sees your payment details; the App only receives from Google Play the confirmation that the purchase was made, to remove the ads.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="shareTitle">8. Sharing and Exporting</h2>
+                <p data-i18n="shareText">A document leaves the App only when you decide so: when you share it (Android share sheet), save it to a folder you choose, to Downloads or to the gallery. The app or service you choose then handles it under its own privacy policy.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="backupTitle">9. Android Backup</h2>
+                <p data-i18n="backupText">If Android backup is turned on on your phone, your documents are included in your Google account backup so you can find them on a new phone. This backup is managed by Google, is encrypted by Android, and Wonastral has no access to it. You can turn it off in your phone's settings (System → Backup).</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="permTitle">10. Permissions</h2>
+                <p data-i18n="permText">OwnScan asks for no access to your location, contacts, microphone or photo library. The permissions it declares are:</p>
+                <ul>
+                    <li data-i18n="perm1">Internet and network state: for the ad banner and the Google Play purchase only;</li>
+                    <li data-i18n="perm2">Advertising ID: used by AdMob in the free version only;</li>
+                    <li data-i18n="perm3">Google Play Billing: for the ad-free purchase;</li>
+                    <li data-i18n="perm4">Storage (Android 9 and earlier only): to save a PDF to Downloads when you ask for it.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 data-i18n="rightsTitle">11. Your Rights (GDPR)</h2>
+                <p data-i18n="rightsText1">Under the General Data Protection Regulation, you have the right to access, rectify and erase your data, to restrict or object to its processing, to data portability and to withdraw your consent at any time. Personalized advertising relies on your consent; the App's other features rely on our legitimate interest in providing the service you requested.</p>
+                <p data-i18n="rightsText2">As Wonastral holds no data about you, your documents are under your sole control on your device: you can export or delete them yourself at any time. For data processed by Google for advertising, you can use the consent form in the App, your Android advertising settings, or contact Google directly.</p>
+                <p data-i18n-html="rightsText3">For any question, write to us (see Contact). You also have the right to lodge a complaint with a data protection authority — in France, the <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="childrenTitle">12. Children</h2>
+                <p data-i18n="childrenText">The App is not directed at children under 13 (or the minimum age applicable in your country) and does not knowingly collect any data about them.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="securityTitle">13. Security</h2>
+                <p data-i18n="securityText">Your documents are stored in the App's private storage, protected by Android. Wonastral keeps no database of users that could be breached. Network exchanges made by Google components are encrypted (HTTPS).</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="changesTitle">14. Changes to This Policy</h2>
+                <p data-i18n="changesText">We may update this policy to reflect changes in the App or in the law. The new version will be published on this page with a new "Last updated" date.</p>
+            </section>
+
+            <section>
+                <h2 data-i18n="contactTitle">15. Contact</h2>
+                <p data-i18n="contactText">Wonastral, publisher of OwnScan, is responsible for this policy. For any question or request:</p>
+                <p><a href="mailto:wonastral.mapp@gmail.com">wonastral.mapp@gmail.com</a></p>
+            </section>
+        </div>
+
+        <footer data-i18n="footer">
+            &copy; 2026 Wonastral — All rights reserved
+        </footer>
+    </div>
+
+    <script>
+        const FLAGS = {
+            en: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V40 M0,20 H60" stroke="#FFFFFF" stroke-width="10"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="5"/></svg>',
+            fr: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="40" fill="#0055A4"/><rect x="20" width="20" height="40" fill="#FFFFFF"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg>',
+            es: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="10" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/><rect y="30" width="60" height="10" fill="#AA151B"/></svg>',
+            de: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="13.33" fill="#000000"/><rect y="13.33" width="60" height="13.33" fill="#DD0000"/><rect y="26.66" width="60" height="13.34" fill="#FFCE00"/></svg>',
+            it: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="40" fill="#009246"/><rect x="20" width="20" height="40" fill="#FFFFFF"/><rect x="40" width="20" height="40" fill="#CE2B37"/></svg>',
+            ja: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="#FFFFFF"/><circle cx="30" cy="20" r="11" fill="#BC002D"/></svg>',
+            ko: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="#FFFFFF"/><circle cx="30" cy="20" r="11" fill="#0047A0"/><path d="M19 20 A11 11 0 0 1 41 20 Z" fill="#CD2E3A"/><circle cx="24.5" cy="20" r="5.5" fill="#CD2E3A"/><circle cx="35.5" cy="20" r="5.5" fill="#0047A0"/></svg>',
+            zh: '<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="#DE2910"/><polygon points="14,6 15.65,10.74 20.66,10.84 16.66,13.87 18.11,18.66 14,15.8 9.886,18.66 11.34,13.87 7.343,10.84 12.35,10.74" fill="#FFDE00"/><circle cx="24" cy="5" r="1.6" fill="#FFDE00"/><circle cx="28" cy="9" r="1.6" fill="#FFDE00"/><circle cx="28" cy="14" r="1.6" fill="#FFDE00"/><circle cx="24" cy="18" r="1.6" fill="#FFDE00"/></svg>'
+        };
+
+        const TRANSLATIONS = {
+            "en": {
+                "name": "English",
+                "docTitle": "OwnScan — Privacy Policy",
+                "title": "OwnScan",
+                "subtitle": "Privacy Policy",
+                "lastUpdatedLabel": "Last updated:",
+                "lastUpdatedDate": "October 14, 2026",
+                "introTitle": "1. Introduction",
+                "introText": "This Privacy Policy describes how the Android app \"OwnScan\" (the \"App\"), published by Wonastral, handles information when you use it. OwnScan turns paper documents into PDF files. It was designed so that your documents stay yours: they are processed and stored on your phone, not on our servers.",
+                "summaryTitle": "2. In Short",
+                "summary1": "No account, no sign-up, no email address requested.",
+                "summary2": "Your scans, the recognized text and your signature are stored only on your device.",
+                "summary3": "Wonastral operates no server for this App and receives none of your documents.",
+                "summary4": "The free version shows an ad banner from Google AdMob, with your consent where the law requires it. The ad-free version loads no advertising component at all.",
+                "summary5": "You can delete all your data at any time from the App's settings.",
+                "localTitle": "3. Your Documents Stay on Your Device",
+                "localText1": "The pages you scan or import, the PDF files produced, the text recognized in them, your saved signature and your settings are stored in the App's private storage on your device. Other apps cannot read them, and they are never sent to Wonastral.",
+                "localText2": "They are kept until you delete them. You can delete a page, a document, or everything at once (Settings → Privacy → Delete all my data). Uninstalling the App also deletes them.",
+                "scanTitle": "4. Camera and Text Recognition",
+                "scanText": "Pages are captured with the document scanner provided by Google Play services; the App itself does not request the camera permission. Edge detection, filters, PDF creation and text recognition (Google ML Kit, with a model embedded in the App) all run on your device, without an internet connection. The content of your images and texts is never sent online.",
+                "techTitle": "5. Technical Data From Google Components",
+                "techText1": "Like any app using them, the Google components embedded in OwnScan (ML Kit and Google Play services) may send Google limited technical information to measure their reliability: device model, Android version, app version, performance metrics, error codes and an identifier specific to this installation. This information never includes the content of your documents. It is encrypted in transit and is not shared with third parties.",
+                "techText2": "Details: <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a> and Google's privacy policy, <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. Advertising — Google AdMob",
+                "adsText1": "The free version displays a banner at the bottom of the screen, served by Google AdMob, a service of Google LLC. There are no full-screen ads. AdMob is an independent third party that may process certain information to serve ads, including personalized ads where you have agreed to it.",
+                "adsText2": "Depending on your consent and device settings, AdMob may process:",
+                "adsItem1": "your Android advertising ID (a resettable identifier);",
+                "adsItem2": "your IP address and the approximate location derived from it;",
+                "adsItem3": "device information (model, Android version, language);",
+                "adsItem4": "interactions with ads (impressions, clicks).",
+                "adsText3": "This data is processed by Google under its own privacy policy: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. AdMob-specific details: <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "In the European Economic Area, the United Kingdom and Switzerland, the App asks for your consent through Google's consent form before the advertising component starts. You can change or withdraw your choice at any time in Settings → Privacy → Manage ad consent. If you refuse, the App works exactly the same; only non-personalized ads may be shown.",
+                "adsText5": "If you buy the ad-free version, the advertising component is never started: no ad request is made and the advertising ID is not read.",
+                "purchaseTitle": "7. In-App Purchase",
+                "purchaseText": "The ad-free version is a one-time purchase processed by Google Play. Wonastral never sees your payment details; the App only receives from Google Play the confirmation that the purchase was made, to remove the ads.",
+                "shareTitle": "8. Sharing and Exporting",
+                "shareText": "A document leaves the App only when you decide so: when you share it (Android share sheet), save it to a folder you choose, to Downloads or to the gallery. The app or service you choose then handles it under its own privacy policy.",
+                "backupTitle": "9. Android Backup",
+                "backupText": "If Android backup is turned on on your phone, your documents are included in your Google account backup so you can find them on a new phone. This backup is managed by Google, is encrypted by Android, and Wonastral has no access to it. You can turn it off in your phone's settings (System → Backup).",
+                "permTitle": "10. Permissions",
+                "permText": "OwnScan asks for no access to your location, contacts, microphone or photo library. The permissions it declares are:",
+                "perm1": "Internet and network state: for the ad banner and the Google Play purchase only;",
+                "perm2": "Advertising ID: used by AdMob in the free version only;",
+                "perm3": "Google Play Billing: for the ad-free purchase;",
+                "perm4": "Storage (Android 9 and earlier only): to save a PDF to Downloads when you ask for it.",
+                "rightsTitle": "11. Your Rights (GDPR)",
+                "rightsText1": "Under the General Data Protection Regulation, you have the right to access, rectify and erase your data, to restrict or object to its processing, to data portability and to withdraw your consent at any time. Personalized advertising relies on your consent; the App's other features rely on our legitimate interest in providing the service you requested.",
+                "rightsText2": "As Wonastral holds no data about you, your documents are under your sole control on your device: you can export or delete them yourself at any time. For data processed by Google for advertising, you can use the consent form in the App, your Android advertising settings, or contact Google directly.",
+                "rightsText3": "For any question, write to us (see Contact). You also have the right to lodge a complaint with a data protection authority — in France, the <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>.",
+                "childrenTitle": "12. Children",
+                "childrenText": "The App is not directed at children under 13 (or the minimum age applicable in your country) and does not knowingly collect any data about them.",
+                "securityTitle": "13. Security",
+                "securityText": "Your documents are stored in the App's private storage, protected by Android. Wonastral keeps no database of users that could be breached. Network exchanges made by Google components are encrypted (HTTPS).",
+                "changesTitle": "14. Changes to This Policy",
+                "changesText": "We may update this policy to reflect changes in the App or in the law. The new version will be published on this page with a new \"Last updated\" date.",
+                "contactTitle": "15. Contact",
+                "contactText": "Wonastral, publisher of OwnScan, is responsible for this policy. For any question or request:",
+                "footer": "© 2026 Wonastral — All rights reserved"
+            },
+            "fr": {
+                "name": "Français",
+                "docTitle": "OwnScan — Politique de confidentialité",
+                "title": "OwnScan",
+                "subtitle": "Politique de confidentialité",
+                "lastUpdatedLabel": "Dernière mise à jour :",
+                "lastUpdatedDate": "14 octobre 2026",
+                "introTitle": "1. Introduction",
+                "introText": "Cette politique de confidentialité décrit la manière dont l'application Android « OwnScan » (l'« Application »), éditée par Wonastral, traite les informations lorsque vous l'utilisez. OwnScan transforme vos documents papier en PDF. Elle a été conçue pour que vos documents restent à vous : ils sont traités et stockés sur votre téléphone, pas sur nos serveurs.",
+                "summaryTitle": "2. En bref",
+                "summary1": "Aucun compte, aucune inscription, aucune adresse e-mail demandée.",
+                "summary2": "Vos numérisations, le texte reconnu et votre signature sont stockés uniquement sur votre appareil.",
+                "summary3": "Wonastral n'exploite aucun serveur pour cette Application et ne reçoit aucun de vos documents.",
+                "summary4": "La version gratuite affiche une bannière publicitaire Google AdMob, avec votre consentement là où la loi l'exige. La version sans publicité ne charge aucun module publicitaire.",
+                "summary5": "Vous pouvez effacer toutes vos données à tout moment depuis les réglages de l'Application.",
+                "localTitle": "3. Vos documents restent sur votre appareil",
+                "localText1": "Les pages que vous numérisez ou importez, les PDF produits, le texte qui y est reconnu, votre signature enregistrée et vos réglages sont stockés dans l'espace privé de l'Application sur votre appareil. Les autres applications ne peuvent pas les lire, et ils ne sont jamais envoyés à Wonastral.",
+                "localText2": "Ils sont conservés jusqu'à ce que vous les supprimiez. Vous pouvez supprimer une page, un document, ou tout à la fois (Réglages → Confidentialité → Effacer toutes mes données). La désinstallation de l'Application les supprime également.",
+                "scanTitle": "4. Appareil photo et reconnaissance du texte",
+                "scanText": "Les pages sont capturées avec le scanner de documents fourni par les services Google Play ; l'Application elle-même ne demande pas l'autorisation d'accès à l'appareil photo. La détection des bords, les filtres, la création du PDF et la reconnaissance du texte (Google ML Kit, avec un modèle intégré à l'Application) fonctionnent entièrement sur votre appareil, sans connexion Internet. Le contenu de vos images et de vos textes n'est jamais envoyé en ligne.",
+                "techTitle": "5. Données techniques des composants Google",
+                "techText1": "Comme dans toute application qui les utilise, les composants Google intégrés à OwnScan (ML Kit et services Google Play) peuvent transmettre à Google des informations techniques limitées pour mesurer leur fiabilité : modèle de l'appareil, version d'Android, version de l'application, mesures de performance, codes d'erreur et un identifiant propre à cette installation. Ces informations ne contiennent jamais le contenu de vos documents. Elles sont chiffrées pendant leur transfert et ne sont pas partagées avec des tiers.",
+                "techText2": "Détails : <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a> et politique de confidentialité de Google, <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. Publicité — Google AdMob",
+                "adsText1": "La version gratuite affiche une bannière en bas de l'écran, fournie par Google AdMob, un service de Google LLC. Il n'y a aucune publicité en plein écran. AdMob est un tiers indépendant qui peut traiter certaines informations pour diffuser des annonces, y compris des annonces personnalisées si vous l'avez accepté.",
+                "adsText2": "Selon votre consentement et les réglages de votre appareil, AdMob peut traiter :",
+                "adsItem1": "votre identifiant publicitaire Android (un identifiant réinitialisable) ;",
+                "adsItem2": "votre adresse IP et la position approximative qui en est déduite ;",
+                "adsItem3": "des informations sur l'appareil (modèle, version d'Android, langue) ;",
+                "adsItem4": "vos interactions avec les annonces (affichages, clics).",
+                "adsText3": "Ces données sont traitées par Google selon sa propre politique de confidentialité : <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. Précisions propres à AdMob : <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "Dans l'Espace économique européen, au Royaume-Uni et en Suisse, l'Application recueille votre consentement à l'aide du formulaire de Google avant de démarrer le module publicitaire. Vous pouvez modifier ou retirer votre choix à tout moment dans Réglages → Confidentialité → Gérer le consentement publicitaire. En cas de refus, l'Application fonctionne exactement de la même façon ; seules des annonces non personnalisées peuvent être affichées.",
+                "adsText5": "Si vous achetez la version sans publicité, le module publicitaire n'est jamais démarré : aucune requête publicitaire n'est envoyée et l'identifiant publicitaire n'est pas lu.",
+                "purchaseTitle": "7. Achat intégré",
+                "purchaseText": "La version sans publicité est un achat unique traité par Google Play. Wonastral ne voit jamais vos coordonnées de paiement ; l'Application reçoit seulement de Google Play la confirmation que l'achat a eu lieu, pour retirer la publicité.",
+                "shareTitle": "8. Partage et export",
+                "shareText": "Un document ne quitte l'Application que lorsque vous le décidez : quand vous le partagez (menu de partage d'Android), l'enregistrez dans un dossier de votre choix, dans Téléchargements ou dans la galerie. L'application ou le service que vous choisissez le traite alors selon sa propre politique de confidentialité.",
+                "backupTitle": "9. Sauvegarde Android",
+                "backupText": "Si la sauvegarde Android est activée sur votre téléphone, vos documents font partie de la sauvegarde de votre compte Google, afin de les retrouver sur un nouveau téléphone. Cette sauvegarde est gérée par Google, chiffrée par Android, et Wonastral n'y a pas accès. Vous pouvez la désactiver dans les paramètres de votre téléphone (Système → Sauvegarde).",
+                "permTitle": "10. Autorisations",
+                "permText": "OwnScan ne demande aucun accès à votre position, à vos contacts, à votre micro ni à votre galerie de photos. Les autorisations déclarées sont :",
+                "perm1": "Internet et état du réseau : uniquement pour la bannière publicitaire et l'achat Google Play ;",
+                "perm2": "Identifiant publicitaire : utilisé par AdMob dans la version gratuite seulement ;",
+                "perm3": "Facturation Google Play : pour l'achat de la version sans publicité ;",
+                "perm4": "Stockage (Android 9 et versions antérieures uniquement) : pour enregistrer un PDF dans Téléchargements quand vous le demandez.",
+                "rightsTitle": "11. Vos droits (RGPD)",
+                "rightsText1": "Conformément au Règlement général sur la protection des données, vous disposez d'un droit d'accès, de rectification et d'effacement de vos données, d'un droit à la limitation et d'opposition au traitement, d'un droit à la portabilité et du droit de retirer votre consentement à tout moment. La publicité personnalisée repose sur votre consentement ; les autres fonctions de l'Application reposent sur notre intérêt légitime à vous fournir le service demandé.",
+                "rightsText2": "Wonastral ne détenant aucune donnée vous concernant, vos documents restent sous votre seul contrôle sur votre appareil : vous pouvez les exporter ou les effacer vous-même à tout moment. Pour les données traitées par Google à des fins publicitaires, utilisez le formulaire de consentement de l'Application, les réglages publicitaires d'Android, ou contactez directement Google.",
+                "rightsText3": "Pour toute question, écrivez-nous (voir Contact). Vous pouvez aussi introduire une réclamation auprès d'une autorité de protection des données — en France, la <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>.",
+                "childrenTitle": "12. Enfants",
+                "childrenText": "L'Application ne s'adresse pas aux enfants de moins de 13 ans (ou de l'âge minimum applicable dans votre pays) et ne collecte sciemment aucune donnée les concernant.",
+                "securityTitle": "13. Sécurité",
+                "securityText": "Vos documents sont stockés dans l'espace privé de l'Application, protégé par Android. Wonastral ne conserve aucune base de données d'utilisateurs qui pourrait être piratée. Les échanges réseau des composants Google sont chiffrés (HTTPS).",
+                "changesTitle": "14. Modifications de cette politique",
+                "changesText": "Nous pouvons mettre à jour cette politique pour tenir compte d'une évolution de l'Application ou de la loi. La nouvelle version sera publiée sur cette page avec une nouvelle date de « Dernière mise à jour ».",
+                "contactTitle": "15. Contact",
+                "contactText": "Wonastral, éditeur d'OwnScan, est responsable de cette politique. Pour toute question ou demande :",
+                "footer": "© 2026 Wonastral — Tous droits réservés"
+            },
+            "es": {
+                "name": "Español",
+                "docTitle": "OwnScan — Política de privacidad",
+                "title": "OwnScan",
+                "subtitle": "Política de privacidad",
+                "lastUpdatedLabel": "Última actualización:",
+                "lastUpdatedDate": "14 de octubre de 2026",
+                "introTitle": "1. Introducción",
+                "introText": "Esta política de privacidad describe cómo la aplicación Android «OwnScan» (la «Aplicación»), publicada por Wonastral, trata la información cuando la utilizas. OwnScan convierte documentos en papel en archivos PDF. Ha sido diseñada para que tus documentos sigan siendo tuyos: se procesan y se guardan en tu teléfono, no en nuestros servidores.",
+                "summaryTitle": "2. En resumen",
+                "summary1": "Sin cuenta, sin registro, sin pedir ninguna dirección de correo electrónico.",
+                "summary2": "Tus escaneos, el texto reconocido y tu firma se guardan solo en tu dispositivo.",
+                "summary3": "Wonastral no opera ningún servidor para esta Aplicación y no recibe ninguno de tus documentos.",
+                "summary4": "La versión gratuita muestra un banner publicitario de Google AdMob, con tu consentimiento donde la ley lo exige. La versión sin publicidad no carga ningún componente publicitario.",
+                "summary5": "Puedes borrar todos tus datos en cualquier momento desde los ajustes de la Aplicación.",
+                "localTitle": "3. Tus documentos se quedan en tu dispositivo",
+                "localText1": "Las páginas que escaneas o importas, los PDF generados, el texto reconocido, tu firma guardada y tus ajustes se almacenan en el espacio privado de la Aplicación en tu dispositivo. Otras aplicaciones no pueden leerlos y nunca se envían a Wonastral.",
+                "localText2": "Se conservan hasta que los borres. Puedes eliminar una página, un documento o todo a la vez (Ajustes → Privacidad → Borrar todos mis datos). Desinstalar la Aplicación también los elimina.",
+                "scanTitle": "4. Cámara y reconocimiento de texto",
+                "scanText": "Las páginas se capturan con el escáner de documentos de los servicios de Google Play; la propia Aplicación no solicita el permiso de cámara. La detección de bordes, los filtros, la creación del PDF y el reconocimiento de texto (Google ML Kit, con un modelo integrado en la Aplicación) funcionan íntegramente en tu dispositivo, sin conexión a Internet. El contenido de tus imágenes y textos nunca se envía a Internet.",
+                "techTitle": "5. Datos técnicos de los componentes de Google",
+                "techText1": "Como en cualquier aplicación que los utilice, los componentes de Google integrados en OwnScan (ML Kit y servicios de Google Play) pueden enviar a Google información técnica limitada para medir su fiabilidad: modelo del dispositivo, versión de Android, versión de la aplicación, métricas de rendimiento, códigos de error y un identificador propio de esta instalación. Esta información nunca incluye el contenido de tus documentos. Se cifra durante la transmisión y no se comparte con terceros.",
+                "techText2": "Detalles: <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a> y la política de privacidad de Google, <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. Publicidad — Google AdMob",
+                "adsText1": "La versión gratuita muestra un banner en la parte inferior de la pantalla, servido por Google AdMob, un servicio de Google LLC. No hay anuncios a pantalla completa. AdMob es un tercero independiente que puede tratar cierta información para mostrar anuncios, incluidos anuncios personalizados si lo has aceptado.",
+                "adsText2": "Según tu consentimiento y los ajustes de tu dispositivo, AdMob puede tratar:",
+                "adsItem1": "tu identificador de publicidad de Android (un identificador que se puede restablecer);",
+                "adsItem2": "tu dirección IP y la ubicación aproximada que se deduce de ella;",
+                "adsItem3": "información del dispositivo (modelo, versión de Android, idioma);",
+                "adsItem4": "tus interacciones con los anuncios (impresiones, clics).",
+                "adsText3": "Google trata estos datos según su propia política de privacidad: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. Detalles específicos de AdMob: <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "En el Espacio Económico Europeo, el Reino Unido y Suiza, la Aplicación solicita tu consentimiento mediante el formulario de Google antes de iniciar el componente publicitario. Puedes cambiar o retirar tu elección en cualquier momento en Ajustes → Privacidad → Gestionar el consentimiento publicitario. Si lo rechazas, la Aplicación funciona exactamente igual; solo pueden mostrarse anuncios no personalizados.",
+                "adsText5": "Si compras la versión sin publicidad, el componente publicitario nunca se inicia: no se envía ninguna solicitud de anuncios y no se lee el identificador de publicidad.",
+                "purchaseTitle": "7. Compra integrada",
+                "purchaseText": "La versión sin publicidad es una compra única gestionada por Google Play. Wonastral nunca ve tus datos de pago; la Aplicación solo recibe de Google Play la confirmación de que la compra se ha realizado, para retirar la publicidad.",
+                "shareTitle": "8. Compartir y exportar",
+                "shareText": "Un documento solo sale de la Aplicación cuando tú lo decides: al compartirlo (menú para compartir de Android) o al guardarlo en una carpeta que elijas, en Descargas o en la galería. La aplicación o el servicio que elijas lo trata entonces según su propia política de privacidad.",
+                "backupTitle": "9. Copia de seguridad de Android",
+                "backupText": "Si la copia de seguridad de Android está activada en tu teléfono, tus documentos se incluyen en la copia de seguridad de tu cuenta de Google para que puedas recuperarlos en un teléfono nuevo. Esta copia la gestiona Google, está cifrada por Android y Wonastral no tiene acceso a ella. Puedes desactivarla en los ajustes del teléfono (Sistema → Copia de seguridad).",
+                "permTitle": "10. Permisos",
+                "permText": "OwnScan no solicita acceso a tu ubicación, contactos, micrófono ni galería de fotos. Los permisos que declara son:",
+                "perm1": "Internet y estado de la red: solo para el banner publicitario y la compra en Google Play;",
+                "perm2": "Identificador de publicidad: utilizado por AdMob solo en la versión gratuita;",
+                "perm3": "Facturación de Google Play: para la compra de la versión sin publicidad;",
+                "perm4": "Almacenamiento (solo Android 9 y anteriores): para guardar un PDF en Descargas cuando lo pides.",
+                "rightsTitle": "11. Tus derechos (RGPD)",
+                "rightsText1": "De acuerdo con el Reglamento General de Protección de Datos, tienes derecho a acceder, rectificar y suprimir tus datos, a limitar su tratamiento u oponerte a él, a la portabilidad y a retirar tu consentimiento en cualquier momento. La publicidad personalizada se basa en tu consentimiento; las demás funciones de la Aplicación se basan en nuestro interés legítimo en prestarte el servicio solicitado.",
+                "rightsText2": "Como Wonastral no conserva ningún dato sobre ti, tus documentos están bajo tu exclusivo control en tu dispositivo: puedes exportarlos o borrarlos tú mismo en cualquier momento. Para los datos que Google trata con fines publicitarios, utiliza el formulario de consentimiento de la Aplicación, los ajustes de publicidad de Android o contacta directamente con Google.",
+                "rightsText3": "Para cualquier pregunta, escríbenos (ver Contacto). También tienes derecho a presentar una reclamación ante una autoridad de protección de datos; en Francia, la <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>.",
+                "childrenTitle": "12. Menores",
+                "childrenText": "La Aplicación no está dirigida a menores de 13 años (o de la edad mínima aplicable en tu país) y no recopila conscientemente ningún dato sobre ellos.",
+                "securityTitle": "13. Seguridad",
+                "securityText": "Tus documentos se guardan en el espacio privado de la Aplicación, protegido por Android. Wonastral no mantiene ninguna base de datos de usuarios que pueda ser vulnerada. Los intercambios de red de los componentes de Google están cifrados (HTTPS).",
+                "changesTitle": "14. Cambios en esta política",
+                "changesText": "Podemos actualizar esta política para reflejar cambios en la Aplicación o en la ley. La nueva versión se publicará en esta página con una nueva fecha de «Última actualización».",
+                "contactTitle": "15. Contacto",
+                "contactText": "Wonastral, editor de OwnScan, es responsable de esta política. Para cualquier pregunta o solicitud:",
+                "footer": "© 2026 Wonastral — Todos los derechos reservados"
+            },
+            "de": {
+                "name": "Deutsch",
+                "docTitle": "OwnScan — Datenschutzerklärung",
+                "title": "OwnScan",
+                "subtitle": "Datenschutzerklärung",
+                "lastUpdatedLabel": "Zuletzt aktualisiert:",
+                "lastUpdatedDate": "14. Oktober 2026",
+                "introTitle": "1. Einleitung",
+                "introText": "Diese Datenschutzerklärung beschreibt, wie die Android-App „OwnScan“ (die „App“), herausgegeben von Wonastral, mit Informationen umgeht, wenn du sie nutzt. OwnScan verwandelt Papierdokumente in PDF-Dateien. Sie wurde so entwickelt, dass deine Dokumente dir gehören: Sie werden auf deinem Telefon verarbeitet und gespeichert, nicht auf unseren Servern.",
+                "summaryTitle": "2. Kurz gesagt",
+                "summary1": "Kein Konto, keine Registrierung, keine E-Mail-Adresse erforderlich.",
+                "summary2": "Deine Scans, der erkannte Text und deine Unterschrift werden nur auf deinem Gerät gespeichert.",
+                "summary3": "Wonastral betreibt für diese App keinen Server und erhält keines deiner Dokumente.",
+                "summary4": "Die kostenlose Version zeigt ein Werbebanner von Google AdMob – mit deiner Einwilligung, wo das Gesetz sie verlangt. Die werbefreie Version lädt keinerlei Werbekomponente.",
+                "summary5": "Du kannst alle deine Daten jederzeit in den Einstellungen der App löschen.",
+                "localTitle": "3. Deine Dokumente bleiben auf deinem Gerät",
+                "localText1": "Die Seiten, die du scannst oder importierst, die erzeugten PDF-Dateien, der darin erkannte Text, deine gespeicherte Unterschrift und deine Einstellungen werden im privaten Speicher der App auf deinem Gerät abgelegt. Andere Apps können sie nicht lesen, und sie werden niemals an Wonastral gesendet.",
+                "localText2": "Sie bleiben gespeichert, bis du sie löschst. Du kannst eine Seite, ein Dokument oder alles auf einmal löschen (Einstellungen → Datenschutz → Alle meine Daten löschen). Auch die Deinstallation der App löscht sie.",
+                "scanTitle": "4. Kamera und Texterkennung",
+                "scanText": "Die Seiten werden mit dem Dokumentenscanner der Google Play-Dienste aufgenommen; die App selbst fordert keine Kameraberechtigung an. Kantenerkennung, Filter, PDF-Erstellung und Texterkennung (Google ML Kit, mit einem in die App integrierten Modell) laufen vollständig auf deinem Gerät, ohne Internetverbindung. Der Inhalt deiner Bilder und Texte wird niemals online übertragen.",
+                "techTitle": "5. Technische Daten der Google-Komponenten",
+                "techText1": "Wie in jeder App, die sie verwendet, können die in OwnScan integrierten Google-Komponenten (ML Kit und Google Play-Dienste) begrenzte technische Informationen an Google senden, um ihre Zuverlässigkeit zu messen: Gerätemodell, Android-Version, App-Version, Leistungswerte, Fehlercodes und eine Kennung dieser Installation. Diese Informationen enthalten niemals den Inhalt deiner Dokumente. Sie werden bei der Übertragung verschlüsselt und nicht an Dritte weitergegeben.",
+                "techText2": "Details: <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a> und die Datenschutzerklärung von Google, <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. Werbung — Google AdMob",
+                "adsText1": "Die kostenlose Version zeigt ein Banner am unteren Bildschirmrand, bereitgestellt von Google AdMob, einem Dienst der Google LLC. Es gibt keine Vollbildwerbung. AdMob ist ein unabhängiger Dritter, der bestimmte Informationen verarbeiten kann, um Anzeigen auszuliefern – einschließlich personalisierter Anzeigen, wenn du zugestimmt hast.",
+                "adsText2": "Je nach deiner Einwilligung und deinen Geräteeinstellungen kann AdMob Folgendes verarbeiten:",
+                "adsItem1": "deine Android-Werbe-ID (eine zurücksetzbare Kennung);",
+                "adsItem2": "deine IP-Adresse und den daraus abgeleiteten ungefähren Standort;",
+                "adsItem3": "Geräteinformationen (Modell, Android-Version, Sprache);",
+                "adsItem4": "deine Interaktionen mit Anzeigen (Impressionen, Klicks).",
+                "adsText3": "Diese Daten werden von Google gemäß seiner eigenen Datenschutzerklärung verarbeitet: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. Hinweise speziell zu AdMob: <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz holt die App über das Einwilligungsformular von Google deine Einwilligung ein, bevor die Werbekomponente startet. Du kannst deine Wahl jederzeit unter Einstellungen → Datenschutz → Werbeeinwilligung verwalten ändern oder widerrufen. Lehnst du ab, funktioniert die App genauso; es können nur nicht personalisierte Anzeigen erscheinen.",
+                "adsText5": "Wenn du die werbefreie Version kaufst, wird die Werbekomponente nie gestartet: Es werden keine Anzeigenanfragen gesendet und die Werbe-ID wird nicht gelesen.",
+                "purchaseTitle": "7. In-App-Kauf",
+                "purchaseText": "Die werbefreie Version ist ein einmaliger Kauf, der über Google Play abgewickelt wird. Wonastral sieht niemals deine Zahlungsdaten; die App erhält von Google Play nur die Bestätigung, dass der Kauf erfolgt ist, um die Werbung zu entfernen.",
+                "shareTitle": "8. Teilen und Exportieren",
+                "shareText": "Ein Dokument verlässt die App nur, wenn du es entscheidest: wenn du es teilst (Android-Teilen-Menü) oder in einem Ordner deiner Wahl, unter Downloads oder in der Galerie speicherst. Die gewählte App bzw. der gewählte Dienst verarbeitet es dann gemäß der eigenen Datenschutzerklärung.",
+                "backupTitle": "9. Android-Sicherung",
+                "backupText": "Wenn die Android-Sicherung auf deinem Telefon aktiviert ist, sind deine Dokumente Teil der Sicherung deines Google-Kontos, damit du sie auf einem neuen Telefon wiederfindest. Diese Sicherung wird von Google verwaltet, von Android verschlüsselt, und Wonastral hat keinen Zugriff darauf. Du kannst sie in den Einstellungen deines Telefons deaktivieren (System → Sicherung).",
+                "permTitle": "10. Berechtigungen",
+                "permText": "OwnScan fordert keinen Zugriff auf deinen Standort, deine Kontakte, dein Mikrofon oder deine Fotogalerie an. Die deklarierten Berechtigungen sind:",
+                "perm1": "Internet und Netzwerkstatus: nur für das Werbebanner und den Kauf über Google Play;",
+                "perm2": "Werbe-ID: nur in der kostenlosen Version von AdMob verwendet;",
+                "perm3": "Google Play-Abrechnung: für den Kauf der werbefreien Version;",
+                "perm4": "Speicher (nur Android 9 und älter): um auf deinen Wunsch ein PDF unter Downloads zu speichern.",
+                "rightsTitle": "11. Deine Rechte (DSGVO)",
+                "rightsText1": "Nach der Datenschutz-Grundverordnung hast du das Recht auf Auskunft, Berichtigung und Löschung deiner Daten, auf Einschränkung der Verarbeitung und Widerspruch, auf Datenübertragbarkeit sowie das Recht, deine Einwilligung jederzeit zu widerrufen. Personalisierte Werbung beruht auf deiner Einwilligung; die übrigen Funktionen der App beruhen auf unserem berechtigten Interesse, dir den gewünschten Dienst bereitzustellen.",
+                "rightsText2": "Da Wonastral keine Daten über dich speichert, stehen deine Dokumente unter deiner alleinigen Kontrolle auf deinem Gerät: Du kannst sie jederzeit selbst exportieren oder löschen. Für Daten, die Google zu Werbezwecken verarbeitet, nutze das Einwilligungsformular der App, die Werbeeinstellungen von Android oder wende dich direkt an Google.",
+                "rightsText3": "Bei Fragen schreib uns (siehe Kontakt). Du hast außerdem das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren – in Frankreich bei der <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>.",
+                "childrenTitle": "12. Kinder",
+                "childrenText": "Die App richtet sich nicht an Kinder unter 13 Jahren (bzw. dem in deinem Land geltenden Mindestalter) und erhebt wissentlich keine Daten über sie.",
+                "securityTitle": "13. Sicherheit",
+                "securityText": "Deine Dokumente werden im privaten, von Android geschützten Speicher der App abgelegt. Wonastral führt keine Nutzerdatenbank, die angegriffen werden könnte. Die Netzwerkverbindungen der Google-Komponenten sind verschlüsselt (HTTPS).",
+                "changesTitle": "14. Änderungen dieser Erklärung",
+                "changesText": "Wir können diese Erklärung aktualisieren, um Änderungen der App oder der Rechtslage zu berücksichtigen. Die neue Fassung wird auf dieser Seite mit einem neuen Datum „Zuletzt aktualisiert“ veröffentlicht.",
+                "contactTitle": "15. Kontakt",
+                "contactText": "Wonastral, Herausgeber von OwnScan, ist für diese Erklärung verantwortlich. Bei Fragen oder Anliegen:",
+                "footer": "© 2026 Wonastral — Alle Rechte vorbehalten"
+            },
+            "it": {
+                "name": "Italiano",
+                "docTitle": "OwnScan — Informativa sulla privacy",
+                "title": "OwnScan",
+                "subtitle": "Informativa sulla privacy",
+                "lastUpdatedLabel": "Ultimo aggiornamento:",
+                "lastUpdatedDate": "14 ottobre 2026",
+                "introTitle": "1. Introduzione",
+                "introText": "La presente informativa sulla privacy descrive come l'app Android «OwnScan» (l'«App»), pubblicata da Wonastral, tratta le informazioni quando la utilizzi. OwnScan trasforma i documenti cartacei in file PDF. È stata progettata affinché i tuoi documenti restino tuoi: vengono elaborati e conservati sul tuo telefono, non sui nostri server.",
+                "summaryTitle": "2. In breve",
+                "summary1": "Nessun account, nessuna registrazione, nessun indirizzo e-mail richiesto.",
+                "summary2": "Le tue scansioni, il testo riconosciuto e la tua firma sono conservati solo sul tuo dispositivo.",
+                "summary3": "Wonastral non gestisce alcun server per questa App e non riceve nessuno dei tuoi documenti.",
+                "summary4": "La versione gratuita mostra un banner pubblicitario di Google AdMob, con il tuo consenso dove la legge lo richiede. La versione senza pubblicità non carica alcun componente pubblicitario.",
+                "summary5": "Puoi cancellare tutti i tuoi dati in qualsiasi momento dalle impostazioni dell'App.",
+                "localTitle": "3. I tuoi documenti restano sul tuo dispositivo",
+                "localText1": "Le pagine che scansioni o importi, i PDF generati, il testo riconosciuto, la firma salvata e le tue impostazioni sono conservati nello spazio privato dell'App sul tuo dispositivo. Le altre app non possono leggerli e non vengono mai inviati a Wonastral.",
+                "localText2": "Sono conservati finché non li elimini. Puoi eliminare una pagina, un documento o tutto in una volta (Impostazioni → Privacy → Cancella tutti i miei dati). Anche la disinstallazione dell'App li elimina.",
+                "scanTitle": "4. Fotocamera e riconoscimento del testo",
+                "scanText": "Le pagine vengono acquisite con lo scanner di documenti fornito dai servizi Google Play; l'App stessa non richiede l'autorizzazione alla fotocamera. Il rilevamento dei bordi, i filtri, la creazione del PDF e il riconoscimento del testo (Google ML Kit, con un modello integrato nell'App) funzionano interamente sul tuo dispositivo, senza connessione a Internet. Il contenuto delle tue immagini e dei tuoi testi non viene mai inviato online.",
+                "techTitle": "5. Dati tecnici dei componenti Google",
+                "techText1": "Come in qualsiasi app che li utilizza, i componenti Google integrati in OwnScan (ML Kit e servizi Google Play) possono inviare a Google informazioni tecniche limitate per misurarne l'affidabilità: modello del dispositivo, versione di Android, versione dell'app, metriche di prestazione, codici di errore e un identificativo proprio di questa installazione. Queste informazioni non includono mai il contenuto dei tuoi documenti. Sono crittografate durante il trasferimento e non vengono condivise con terze parti.",
+                "techText2": "Dettagli: <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a> e l'informativa sulla privacy di Google, <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. Pubblicità — Google AdMob",
+                "adsText1": "La versione gratuita mostra un banner nella parte inferiore dello schermo, fornito da Google AdMob, un servizio di Google LLC. Non ci sono annunci a schermo intero. AdMob è una terza parte indipendente che può trattare alcune informazioni per mostrare annunci, compresi annunci personalizzati se hai dato il tuo consenso.",
+                "adsText2": "In base al tuo consenso e alle impostazioni del dispositivo, AdMob può trattare:",
+                "adsItem1": "il tuo ID pubblicità Android (un identificativo reimpostabile);",
+                "adsItem2": "il tuo indirizzo IP e la posizione approssimativa che ne deriva;",
+                "adsItem3": "informazioni sul dispositivo (modello, versione di Android, lingua);",
+                "adsItem4": "le tue interazioni con gli annunci (impressioni, clic).",
+                "adsText3": "Questi dati sono trattati da Google secondo la propria informativa sulla privacy: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. Dettagli specifici di AdMob: <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "Nello Spazio Economico Europeo, nel Regno Unito e in Svizzera, l'App raccoglie il tuo consenso tramite il modulo di Google prima di avviare il componente pubblicitario. Puoi modificare o revocare la tua scelta in qualsiasi momento in Impostazioni → Privacy → Gestisci il consenso pubblicitario. Se rifiuti, l'App funziona esattamente allo stesso modo; possono essere mostrati solo annunci non personalizzati.",
+                "adsText5": "Se acquisti la versione senza pubblicità, il componente pubblicitario non viene mai avviato: nessuna richiesta di annunci viene inviata e l'ID pubblicità non viene letto.",
+                "purchaseTitle": "7. Acquisto in-app",
+                "purchaseText": "La versione senza pubblicità è un acquisto unico gestito da Google Play. Wonastral non vede mai i tuoi dati di pagamento; l'App riceve da Google Play solo la conferma che l'acquisto è avvenuto, per rimuovere la pubblicità.",
+                "shareTitle": "8. Condivisione ed esportazione",
+                "shareText": "Un documento esce dall'App solo quando lo decidi tu: quando lo condividi (menu di condivisione di Android) o lo salvi in una cartella a tua scelta, in Download o nella galleria. L'app o il servizio che scegli lo tratta quindi secondo la propria informativa sulla privacy.",
+                "backupTitle": "9. Backup di Android",
+                "backupText": "Se il backup di Android è attivo sul tuo telefono, i tuoi documenti sono inclusi nel backup del tuo account Google, così da ritrovarli su un nuovo telefono. Questo backup è gestito da Google, crittografato da Android, e Wonastral non vi ha accesso. Puoi disattivarlo nelle impostazioni del telefono (Sistema → Backup).",
+                "permTitle": "10. Autorizzazioni",
+                "permText": "OwnScan non richiede l'accesso alla tua posizione, ai contatti, al microfono o alla galleria fotografica. Le autorizzazioni dichiarate sono:",
+                "perm1": "Internet e stato della rete: solo per il banner pubblicitario e l'acquisto su Google Play;",
+                "perm2": "ID pubblicità: usato da AdMob solo nella versione gratuita;",
+                "perm3": "Fatturazione Google Play: per l'acquisto della versione senza pubblicità;",
+                "perm4": "Archiviazione (solo Android 9 e precedenti): per salvare un PDF in Download quando lo richiedi.",
+                "rightsTitle": "11. I tuoi diritti (GDPR)",
+                "rightsText1": "Ai sensi del Regolamento generale sulla protezione dei dati, hai il diritto di accesso, rettifica e cancellazione dei tuoi dati, di limitazione e di opposizione al trattamento, alla portabilità e di revocare il consenso in qualsiasi momento. La pubblicità personalizzata si basa sul tuo consenso; le altre funzioni dell'App si basano sul nostro legittimo interesse a fornirti il servizio richiesto.",
+                "rightsText2": "Poiché Wonastral non conserva alcun dato che ti riguardi, i tuoi documenti restano sotto il tuo esclusivo controllo sul tuo dispositivo: puoi esportarli o cancellarli tu stesso in qualsiasi momento. Per i dati trattati da Google a fini pubblicitari, usa il modulo di consenso dell'App, le impostazioni pubblicitarie di Android o contatta direttamente Google.",
+                "rightsText3": "Per qualsiasi domanda, scrivici (vedi Contatti). Hai inoltre il diritto di proporre reclamo a un'autorità di protezione dei dati; in Francia, la <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>.",
+                "childrenTitle": "12. Minori",
+                "childrenText": "L'App non è destinata a bambini di età inferiore a 13 anni (o all'età minima prevista nel tuo paese) e non raccoglie consapevolmente alcun dato che li riguardi.",
+                "securityTitle": "13. Sicurezza",
+                "securityText": "I tuoi documenti sono conservati nello spazio privato dell'App, protetto da Android. Wonastral non conserva alcun database di utenti che possa essere violato. Gli scambi di rete dei componenti Google sono crittografati (HTTPS).",
+                "changesTitle": "14. Modifiche alla presente informativa",
+                "changesText": "Potremmo aggiornare questa informativa per tenere conto di modifiche dell'App o della legge. La nuova versione sarà pubblicata su questa pagina con una nuova data di «Ultimo aggiornamento».",
+                "contactTitle": "15. Contatti",
+                "contactText": "Wonastral, editore di OwnScan, è responsabile della presente informativa. Per qualsiasi domanda o richiesta:",
+                "footer": "© 2026 Wonastral — Tutti i diritti riservati"
+            },
+            "ja": {
+                "name": "日本語",
+                "docTitle": "OwnScan — プライバシーポリシー",
+                "title": "OwnScan",
+                "subtitle": "プライバシーポリシー",
+                "lastUpdatedLabel": "最終更新日：",
+                "lastUpdatedDate": "2026年10月14日",
+                "introTitle": "1. はじめに",
+                "introText": "本プライバシーポリシーは、Wonastral が提供する Android アプリ「OwnScan」（以下「本アプリ」）をご利用いただく際に、情報がどのように取り扱われるかを説明するものです。OwnScan は紙の書類を PDF ファイルに変換するアプリです。お客様の書類はお客様のものであり続けるよう設計されており、書類は当社のサーバーではなく、お客様のスマートフォン上で処理・保存されます。",
+                "summaryTitle": "2. 概要",
+                "summary1": "アカウント登録は不要で、メールアドレスの入力も求めません。",
+                "summary2": "スキャンした書類、認識されたテキスト、お客様の署名は、お客様の端末内にのみ保存されます。",
+                "summary3": "Wonastral は本アプリのためのサーバーを運用しておらず、お客様の書類を受け取ることは一切ありません。",
+                "summary4": "無料版では Google AdMob のバナー広告を表示します。法律で求められる地域では、お客様の同意を得たうえで表示します。広告なし版では、広告コンポーネントを一切読み込みません。",
+                "summary5": "本アプリの設定から、いつでもすべてのデータを削除できます。",
+                "localTitle": "3. 書類はお客様の端末内に保存されます",
+                "localText1": "スキャンまたはインポートしたページ、作成された PDF ファイル、そこから認識されたテキスト、保存した署名および設定は、お客様の端末上の本アプリ専用の非公開ストレージに保存されます。他のアプリがこれらを読み取ることはできず、Wonastral に送信されることもありません。",
+                "localText2": "これらのデータは、お客様が削除するまで保存されます。ページ単位、書類単位、またはすべてを一度に削除できます（設定 → プライバシー → すべてのデータを削除）。本アプリをアンインストールした場合も削除されます。",
+                "scanTitle": "4. カメラとテキスト認識",
+                "scanText": "ページの撮影には Google Play 開発者サービスが提供するドキュメントスキャナーを使用します。本アプリ自体はカメラの権限を要求しません。輪郭の検出、フィルター、PDF の作成およびテキスト認識（本アプリに組み込まれたモデルを使用する Google ML Kit）は、すべてインターネットに接続することなく、お客様の端末上で実行されます。画像やテキストの内容がオンラインに送信されることはありません。",
+                "techTitle": "5. Google コンポーネントによる技術データ",
+                "techText1": "これらを使用する他のアプリと同様に、OwnScan に組み込まれた Google のコンポーネント（ML Kit および Google Play 開発者サービス）は、信頼性を測定するために、限られた技術情報を Google に送信する場合があります。具体的には、端末のモデル、Android のバージョン、アプリのバージョン、パフォーマンス指標、エラーコード、およびこのインストールに固有の識別子です。これらの情報に書類の内容が含まれることはありません。情報は送信時に暗号化され、第三者と共有されることはありません。",
+                "techText2": "詳細：<a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a>、および Google のプライバシーポリシー <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a> をご覧ください。",
+                "adsTitle": "6. 広告 — Google AdMob",
+                "adsText1": "無料版では、Google LLC のサービスである Google AdMob が配信するバナーを画面下部に表示します。全画面広告はありません。AdMob は独立した第三者であり、広告を配信するために一定の情報を処理する場合があります。お客様が同意した場合には、パーソナライズド広告の配信のための処理も含まれます。",
+                "adsText2": "お客様の同意内容および端末の設定に応じて、AdMob は次の情報を処理する場合があります。",
+                "adsItem1": "Android の広告 ID（リセット可能な識別子）",
+                "adsItem2": "IP アドレスおよびそこから推定されるおおよその位置情報",
+                "adsItem3": "端末情報（モデル、Android のバージョン、言語）",
+                "adsItem4": "広告とのやり取り（表示回数、クリック）",
+                "adsText3": "これらのデータは、Google 独自のプライバシーポリシーに基づいて Google が処理します：<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>。AdMob に関する詳細：<a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>。",
+                "adsText4": "欧州経済領域、英国およびスイスでは、本アプリは広告コンポーネントを起動する前に、Google の同意フォームを通じてお客様の同意を求めます。選択内容は、設定 → プライバシー → 広告の同意を管理 からいつでも変更または撤回できます。同意されない場合でも本アプリはまったく同じように動作し、パーソナライズされていない広告のみが表示される場合があります。",
+                "adsText5": "広告なし版を購入された場合、広告コンポーネントは一切起動されません。広告リクエストは送信されず、広告 ID も読み取られません。",
+                "purchaseTitle": "7. アプリ内購入",
+                "purchaseText": "広告なし版は Google Play で処理される買い切り型の購入です。Wonastral がお客様の支払い情報を目にすることはありません。本アプリが Google Play から受け取るのは、広告を非表示にするための購入完了の確認のみです。",
+                "shareTitle": "8. 共有とエクスポート",
+                "shareText": "書類が本アプリの外に出るのは、お客様がそれを選択した場合のみです。具体的には、共有する場合（Android の共有メニュー）、またはお客様が選んだフォルダ、ダウンロード、ギャラリーに保存する場合です。その後は、お客様が選択したアプリまたはサービスが、それぞれのプライバシーポリシーに基づいて書類を取り扱います。",
+                "backupTitle": "9. Android のバックアップ",
+                "backupText": "お使いのスマートフォンで Android のバックアップが有効になっている場合、新しいスマートフォンでも書類を復元できるよう、書類は Google アカウントのバックアップに含まれます。このバックアップは Google が管理し、Android によって暗号化されており、Wonastral はアクセスできません。バックアップはスマートフォンの設定（システム → バックアップ）で無効にできます。",
+                "permTitle": "10. 権限",
+                "permText": "OwnScan は、位置情報、連絡先、マイク、フォトライブラリへのアクセスを一切要求しません。本アプリが宣言している権限は次のとおりです。",
+                "perm1": "インターネットおよびネットワーク状態：バナー広告と Google Play での購入のためにのみ使用します。",
+                "perm2": "広告 ID：無料版でのみ AdMob が使用します。",
+                "perm3": "Google Play 請求サービス：広告なし版の購入のために使用します。",
+                "perm4": "ストレージ（Android 9 以前のみ）：お客様のご要望に応じて PDF をダウンロードフォルダに保存するために使用します。",
+                "rightsTitle": "11. お客様の権利（GDPR）",
+                "rightsText1": "一般データ保護規則（GDPR）に基づき、お客様には、ご自身のデータへのアクセス、訂正および消去を求める権利、処理の制限を求める権利および処理に異議を述べる権利、データポータビリティの権利、ならびにいつでも同意を撤回する権利があります。パーソナライズド広告はお客様の同意に基づいて行われます。本アプリのその他の機能は、お客様が求めるサービスを提供するという当社の正当な利益に基づいています。",
+                "rightsText2": "Wonastral はお客様に関するデータを一切保有していないため、書類はお客様の端末上で、お客様ご自身のみが管理しています。いつでもご自身でエクスポートまたは削除することができます。Google が広告目的で処理するデータについては、本アプリ内の同意フォーム、Android の広告設定をご利用いただくか、Google に直接お問い合わせください。",
+                "rightsText3": "ご質問がある場合は、当社までご連絡ください（「お問い合わせ」をご参照ください）。また、お客様にはデータ保護当局に苦情を申し立てる権利があります。フランスでは <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a> が担当当局です。",
+                "childrenTitle": "12. お子様について",
+                "childrenText": "本アプリは 13 歳未満（またはお住まいの国で適用される最低年齢未満）のお子様を対象としておらず、お子様に関するデータを故意に収集することはありません。",
+                "securityTitle": "13. セキュリティ",
+                "securityText": "お客様の書類は、Android によって保護された本アプリ専用の非公開ストレージに保存されます。Wonastral は、侵害されるおそれのあるユーザーデータベースを一切保有していません。Google のコンポーネントによるネットワーク通信は暗号化（HTTPS）されています。",
+                "changesTitle": "14. 本ポリシーの変更",
+                "changesText": "本アプリまたは法令の変更を反映するため、本ポリシーを更新することがあります。新しいバージョンは、新たな「最終更新日」とともに本ページに掲載します。",
+                "contactTitle": "15. お問い合わせ",
+                "contactText": "OwnScan の提供者である Wonastral が本ポリシーの責任者です。ご質問やご要望は、以下までお寄せください。",
+                "footer": "© 2026 Wonastral — 無断複製・転載を禁じます"
+            },
+            "ko": {
+                "name": "한국어",
+                "docTitle": "OwnScan — 개인정보 처리방침",
+                "title": "OwnScan",
+                "subtitle": "개인정보 처리방침",
+                "lastUpdatedLabel": "최종 업데이트:",
+                "lastUpdatedDate": "2026년 10월 14일",
+                "introTitle": "1. 소개",
+                "introText": "본 개인정보 처리방침은 Wonastral이 배포하는 Android 앱 'OwnScan'(이하 '앱')을 사용할 때 정보가 어떻게 처리되는지 설명합니다. OwnScan은 종이 문서를 PDF 파일로 변환합니다. 이 앱은 사용자의 문서가 온전히 사용자의 것으로 남도록 설계되었습니다. 문서는 당사의 서버가 아닌 사용자의 휴대전화에서 처리되고 저장됩니다.",
+                "summaryTitle": "2. 요약",
+                "summary1": "계정이나 회원가입이 필요 없으며, 이메일 주소도 요구하지 않습니다.",
+                "summary2": "스캔한 문서, 인식된 텍스트 및 서명은 사용자의 기기에만 저장됩니다.",
+                "summary3": "Wonastral은 이 앱을 위한 서버를 운영하지 않으며, 사용자의 문서를 일절 받지 않습니다.",
+                "summary4": "무료 버전에는 Google AdMob 배너 광고가 표시되며, 법률상 요구되는 지역에서는 사용자의 동의를 받은 후 표시됩니다. 광고 없는 버전은 광고 구성요소를 전혀 불러오지 않습니다.",
+                "summary5": "앱 설정에서 언제든지 모든 데이터를 삭제할 수 있습니다.",
+                "localTitle": "3. 문서는 사용자의 기기에 보관됩니다",
+                "localText1": "스캔하거나 가져온 페이지, 생성된 PDF 파일, 그 안에서 인식된 텍스트, 저장된 서명 및 설정은 사용자 기기의 앱 전용 비공개 저장소에 저장됩니다. 다른 앱은 이를 읽을 수 없으며, Wonastral로 전송되는 일도 없습니다.",
+                "localText2": "이러한 데이터는 사용자가 삭제할 때까지 보관됩니다. 페이지 하나, 문서 하나 또는 전체를 한 번에 삭제할 수 있습니다(설정 → 개인정보 보호 → 내 데이터 모두 삭제). 앱을 제거해도 삭제됩니다.",
+                "scanTitle": "4. 카메라 및 텍스트 인식",
+                "scanText": "페이지는 Google Play 서비스에서 제공하는 문서 스캐너로 촬영되며, 앱 자체는 카메라 권한을 요청하지 않습니다. 가장자리 감지, 필터, PDF 생성 및 텍스트 인식(앱에 내장된 모델을 사용하는 Google ML Kit)은 모두 인터넷 연결 없이 사용자의 기기에서 실행됩니다. 이미지와 텍스트의 내용은 온라인으로 전송되지 않습니다.",
+                "techTitle": "5. Google 구성요소의 기술 데이터",
+                "techText1": "이를 사용하는 다른 앱과 마찬가지로, OwnScan에 내장된 Google 구성요소(ML Kit 및 Google Play 서비스)는 안정성을 측정하기 위해 제한된 기술 정보를 Google에 전송할 수 있습니다. 여기에는 기기 모델, Android 버전, 앱 버전, 성능 지표, 오류 코드 및 해당 설치에 고유한 식별자가 포함됩니다. 이 정보에는 문서의 내용이 절대 포함되지 않습니다. 이 정보는 전송 중에 암호화되며 제3자와 공유되지 않습니다.",
+                "techText2": "자세한 내용은 다음을 참조하시기 바랍니다: <a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a>, Google 개인정보처리방침: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>.",
+                "adsTitle": "6. 광고 — Google AdMob",
+                "adsText1": "무료 버전에서는 Google LLC의 서비스인 Google AdMob이 제공하는 배너가 화면 하단에 표시됩니다. 전면 광고는 없습니다. AdMob은 독립적인 제3자로서, 광고를 게재하기 위해 일부 정보를 처리할 수 있으며, 사용자가 동의한 경우에는 맞춤 광고를 위한 처리도 포함됩니다.",
+                "adsText2": "사용자의 동의 여부와 기기 설정에 따라 AdMob은 다음 정보를 처리할 수 있습니다.",
+                "adsItem1": "Android 광고 ID(재설정 가능한 식별자)",
+                "adsItem2": "IP 주소 및 이를 통해 추정되는 대략적인 위치",
+                "adsItem3": "기기 정보(모델, Android 버전, 언어)",
+                "adsItem4": "광고와의 상호작용(노출, 클릭)",
+                "adsText3": "이 데이터는 Google 자체의 개인정보처리방침에 따라 Google이 처리합니다: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>. AdMob 관련 세부 정보: <a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>.",
+                "adsText4": "유럽 경제 지역, 영국 및 스위스에서는 앱이 광고 구성요소를 시작하기 전에 Google의 동의 양식을 통해 사용자의 동의를 요청합니다. 사용자는 설정 → 개인정보 보호 → 광고 동의 관리에서 언제든지 선택을 변경하거나 철회할 수 있습니다. 동의하지 않더라도 앱은 동일하게 작동하며, 맞춤형이 아닌 광고만 표시될 수 있습니다.",
+                "adsText5": "광고 없는 버전을 구매하면 광고 구성요소가 전혀 시작되지 않습니다. 광고 요청이 전송되지 않으며 광고 ID도 읽지 않습니다.",
+                "purchaseTitle": "7. 인앱 구매",
+                "purchaseText": "광고 없는 버전은 Google Play를 통해 처리되는 1회 구매입니다. Wonastral은 사용자의 결제 정보를 볼 수 없으며, 앱은 광고를 제거하기 위해 구매가 완료되었다는 확인만 Google Play로부터 받습니다.",
+                "shareTitle": "8. 공유 및 내보내기",
+                "shareText": "문서는 사용자가 결정한 경우에만 앱 밖으로 나갑니다. 즉, 문서를 공유하거나(Android 공유 메뉴), 사용자가 선택한 폴더, 다운로드 폴더 또는 갤러리에 저장하는 경우입니다. 이후에는 사용자가 선택한 앱이나 서비스가 자체 개인정보처리방침에 따라 해당 문서를 처리합니다.",
+                "backupTitle": "9. Android 백업",
+                "backupText": "휴대전화에서 Android 백업이 켜져 있는 경우, 새 휴대전화에서도 문서를 복원할 수 있도록 문서가 Google 계정 백업에 포함됩니다. 이 백업은 Google이 관리하고 Android가 암호화하며, Wonastral은 이에 접근할 수 없습니다. 휴대전화 설정(시스템 → 백업)에서 백업을 끌 수 있습니다.",
+                "permTitle": "10. 권한",
+                "permText": "OwnScan은 위치, 연락처, 마이크 또는 사진 보관함에 대한 접근을 요청하지 않습니다. 앱이 선언하는 권한은 다음과 같습니다.",
+                "perm1": "인터넷 및 네트워크 상태: 배너 광고와 Google Play 구매에만 사용합니다.",
+                "perm2": "광고 ID: 무료 버전에서만 AdMob이 사용합니다.",
+                "perm3": "Google Play 결제: 광고 없는 버전 구매에 사용합니다.",
+                "perm4": "저장공간(Android 9 이하에만 해당): 사용자가 요청할 때 PDF를 다운로드 폴더에 저장하는 데 사용합니다.",
+                "rightsTitle": "11. 사용자의 권리(GDPR)",
+                "rightsText1": "일반 개인정보 보호법(GDPR)에 따라 사용자는 자신의 데이터에 대한 열람, 정정 및 삭제를 요구할 권리, 처리의 제한을 요구하거나 처리에 반대할 권리, 데이터 이동권, 그리고 언제든지 동의를 철회할 권리를 가집니다. 맞춤 광고는 사용자의 동의에 근거하며, 앱의 기타 기능은 사용자가 요청한 서비스를 제공하려는 당사의 정당한 이익에 근거합니다.",
+                "rightsText2": "Wonastral은 사용자에 관한 어떠한 데이터도 보유하지 않으므로, 문서는 사용자의 기기에서 전적으로 사용자의 관리하에 있습니다. 사용자는 언제든지 직접 문서를 내보내거나 삭제할 수 있습니다. Google이 광고 목적으로 처리하는 데이터에 대해서는 앱 내 동의 양식이나 Android 광고 설정을 이용하거나 Google에 직접 문의하시기 바랍니다.",
+                "rightsText3": "문의 사항이 있으면 당사로 연락해 주시기 바랍니다('문의' 항목 참조). 또한 사용자는 개인정보 보호 감독기관에 민원을 제기할 권리가 있습니다. 프랑스의 경우 해당 기관은 <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>입니다.",
+                "childrenTitle": "12. 아동",
+                "childrenText": "이 앱은 만 13세 미만(또는 해당 국가에서 적용되는 최소 연령 미만)의 아동을 대상으로 하지 않으며, 아동에 관한 데이터를 고의로 수집하지 않습니다.",
+                "securityTitle": "13. 보안",
+                "securityText": "사용자의 문서는 Android가 보호하는 앱 전용 비공개 저장소에 저장됩니다. Wonastral은 유출될 수 있는 사용자 데이터베이스를 보유하지 않습니다. Google 구성요소의 네트워크 통신은 암호화(HTTPS)됩니다.",
+                "changesTitle": "14. 본 방침의 변경",
+                "changesText": "당사는 앱 또는 법률의 변경 사항을 반영하기 위해 본 방침을 업데이트할 수 있습니다. 새 버전은 새로운 '최종 업데이트' 날짜와 함께 이 페이지에 게시됩니다.",
+                "contactTitle": "15. 문의",
+                "contactText": "OwnScan의 배포자인 Wonastral이 본 방침에 대한 책임을 집니다. 문의 사항이나 요청이 있으시면 아래로 연락해 주시기 바랍니다.",
+                "footer": "© 2026 Wonastral — 모든 권리 보유"
+            },
+            "zh": {
+                "name": "中文",
+                "docTitle": "OwnScan — 隐私政策",
+                "title": "OwnScan",
+                "subtitle": "隐私政策",
+                "lastUpdatedLabel": "最后更新：",
+                "lastUpdatedDate": "2026年10月14日",
+                "introTitle": "1. 简介",
+                "introText": "本隐私政策说明由 Wonastral 发布的 Android 应用“OwnScan”（以下简称“本应用”）在您使用时如何处理信息。OwnScan 可将纸质文件转换为 PDF 文件。本应用的设计初衷是让您的文件始终归您所有：文件在您的手机上处理和存储，而不是在我们的服务器上。",
+                "summaryTitle": "2. 概要",
+                "summary1": "无需账号，无需注册，也不要求提供电子邮件地址。",
+                "summary2": "您的扫描件、识别出的文字和您的签名仅存储在您的设备上。",
+                "summary3": "Wonastral 未为本应用运营任何服务器，也不会收到您的任何文件。",
+                "summary4": "免费版会显示 Google AdMob 横幅广告；在法律要求的地区，会事先征得您的同意。无广告版不会加载任何广告组件。",
+                "summary5": "您可以随时在本应用的设置中删除您的所有数据。",
+                "localTitle": "3. 您的文件保留在您的设备上",
+                "localText1": "您扫描或导入的页面、生成的 PDF 文件、从中识别出的文字、您保存的签名以及您的设置，均存储在您设备上本应用的私有存储空间中。其他应用无法读取这些内容，它们也绝不会发送给 Wonastral。",
+                "localText2": "这些数据会一直保留，直到您将其删除。您可以删除单个页面、单个文件，或一次性删除全部内容（设置 → 隐私 → 删除我的所有数据）。卸载本应用也会将其删除。",
+                "scanTitle": "4. 相机与文字识别",
+                "scanText": "页面通过 Google Play 服务提供的文档扫描器拍摄；本应用本身不申请相机权限。边缘检测、滤镜、PDF 生成和文字识别（Google ML Kit，使用内置于本应用的模型）全部在您的设备上运行，无需联网。您的图片和文字内容绝不会被发送到网上。",
+                "techTitle": "5. Google 组件的技术数据",
+                "techText1": "与所有使用这些组件的应用一样，OwnScan 内置的 Google 组件（ML Kit 和 Google Play 服务）可能会向 Google 发送有限的技术信息，用于衡量其可靠性：设备型号、Android 版本、应用版本、性能指标、错误代码以及本次安装特有的标识符。这些信息绝不包含您文件的内容。它们在传输过程中经过加密，且不会与第三方共享。",
+                "techText2": "详情请参阅：<a href=\"https://developers.google.com/ml-kit/android-data-disclosure\" target=\"_blank\" rel=\"noopener noreferrer\">developers.google.com/ml-kit/android-data-disclosure</a>，以及 Google 隐私权政策 <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>。",
+                "adsTitle": "6. 广告 — Google AdMob",
+                "adsText1": "免费版会在屏幕底部显示由 Google LLC 旗下服务 Google AdMob 提供的横幅广告。本应用不展示全屏广告。AdMob 是独立的第三方，可能会为投放广告而处理某些信息；如果您已同意，还包括投放个性化广告。",
+                "adsText2": "根据您的同意情况和设备设置，AdMob 可能会处理：",
+                "adsItem1": "您的 Android 广告 ID（可重置的标识符）；",
+                "adsItem2": "您的 IP 地址以及据此推断出的大致位置；",
+                "adsItem3": "设备信息（型号、Android 版本、语言）；",
+                "adsItem4": "您与广告的互动（展示、点击）。",
+                "adsText3": "这些数据由 Google 依据其自身的隐私权政策进行处理：<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">policies.google.com/privacy</a>。AdMob 的具体说明：<a href=\"https://support.google.com/admob/answer/6128543\" target=\"_blank\" rel=\"noopener noreferrer\">support.google.com/admob/answer/6128543</a>。",
+                "adsText4": "在欧洲经济区、英国和瑞士，本应用会在启动广告组件之前，通过 Google 的同意书征求您的同意。您可以随时在“设置 → 隐私 → 管理广告同意”中更改或撤回您的选择。如果您拒绝，本应用的运行方式完全不变，仅可能显示非个性化广告。",
+                "adsText5": "如果您购买了无广告版，广告组件将永远不会启动：不会发送任何广告请求，也不会读取广告 ID。",
+                "purchaseTitle": "7. 应用内购买",
+                "purchaseText": "无广告版为一次性购买，由 Google Play 处理。Wonastral 绝不会看到您的付款信息；本应用仅从 Google Play 接收购买已完成的确认，以便移除广告。",
+                "shareTitle": "8. 分享与导出",
+                "shareText": "只有在您决定的情况下，文件才会离开本应用：即当您分享文件（Android 分享菜单），或将其保存到您选择的文件夹、“下载”或图库时。此后，您所选择的应用或服务将依据其自身的隐私政策处理该文件。",
+                "backupTitle": "9. Android 备份",
+                "backupText": "如果您的手机开启了 Android 备份，您的文件将包含在您的 Google 账号备份中，以便您在新手机上找回。此备份由 Google 管理，并由 Android 加密，Wonastral 无法访问。您可以在手机设置（系统 → 备份）中将其关闭。",
+                "permTitle": "10. 权限",
+                "permText": "OwnScan 不会申请访问您的位置、通讯录、麦克风或相册。本应用声明的权限如下：",
+                "perm1": "互联网和网络状态：仅用于横幅广告和 Google Play 购买；",
+                "perm2": "广告 ID：仅在免费版中由 AdMob 使用；",
+                "perm3": "Google Play 结算：用于购买无广告版；",
+                "perm4": "存储（仅限 Android 9 及更早版本）：在您要求时将 PDF 保存到“下载”文件夹。",
+                "rightsTitle": "11. 您的权利（GDPR）",
+                "rightsText1": "根据《通用数据保护条例》（GDPR），您有权访问、更正和删除您的数据，有权限制或反对对其进行处理，享有数据可携带权，并有权随时撤回您的同意。个性化广告以您的同意为依据；本应用的其他功能则以我们为您提供所请求服务的合法利益为依据。",
+                "rightsText2": "由于 Wonastral 不持有任何与您相关的数据，您的文件完全由您在自己的设备上掌控：您可以随时自行导出或删除。对于 Google 出于广告目的处理的数据，您可以使用本应用中的同意书、Android 广告设置，或直接联系 Google。",
+                "rightsText3": "如有任何疑问，请与我们联系（见“联系我们”）。您还有权向数据保护机构提出投诉；在法国，该机构为 <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener noreferrer\">CNIL</a>。",
+                "childrenTitle": "12. 儿童",
+                "childrenText": "本应用并非面向 13 岁以下（或您所在国家/地区适用的最低年龄以下）的儿童，也不会在知情的情况下收集任何有关儿童的数据。",
+                "securityTitle": "13. 安全",
+                "securityText": "您的文件存储在本应用受 Android 保护的私有存储空间中。Wonastral 不保留任何可能遭到入侵的用户数据库。Google 组件的网络通信均经过加密（HTTPS）。",
+                "changesTitle": "14. 本政策的变更",
+                "changesText": "我们可能会更新本政策，以反映本应用或法律的变化。新版本将发布在本页面上，并标注新的“最后更新”日期。",
+                "contactTitle": "15. 联系我们",
+                "contactText": "OwnScan 的发布者 Wonastral 对本政策负责。如有任何疑问或请求，请联系：",
+                "footer": "© 2026 Wonastral — 保留所有权利"
+            }
+        };
+
+        const DEFAULT_LANG = 'en';
+
+        function generateStars(container, starCount = 120, shooterCount = 3) {
+            const frag = document.createDocumentFragment();
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 2.5 + 0.5;
+                const brightness = Math.random() * 0.6 + 0.4;
+                const duration = Math.random() * 4 + 3;
+                const delay = Math.random() * 6;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = (Math.random() * 100) + '%';
+                star.style.top = (Math.random() * 100) + '%';
+                star.style.background = `rgba(255, 255, 255, ${brightness})`;
+                star.style.boxShadow = `0 0 6px 1px rgba(255, 255, 255, ${brightness * 0.7})`;
+                star.style.animation = `twinkle ${duration}s ease-in-out ${delay}s infinite`;
+                frag.appendChild(star);
+            }
+
+            for (let i = 0; i < shooterCount; i++) {
+                const shooter = document.createElement('div');
+                shooter.className = 'shooting-star';
+                shooter.style.left = (Math.random() * 70) + '%';
+                shooter.style.top = (Math.random() * 50) + '%';
+                shooter.style.animationDelay = (i * 6 + Math.random() * 4) + 's';
+                frag.appendChild(shooter);
+            }
+
+            container.appendChild(frag);
+        }
+
+        function initLanguageSwitcher(toggle, menu, flagSlot) {
+            const options = new Map();
+            const browserLang = (navigator.language || '').slice(0, 2).toLowerCase();
+            let currentLang = TRANSLATIONS[browserLang] ? browserLang : DEFAULT_LANG;
+
+            function applyLanguage(lang) {
+                const dict = TRANSLATIONS[lang];
+                if (!dict) return;
+                currentLang = lang;
+
+                document.documentElement.lang = lang;
+                document.title = dict.docTitle;
+
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key] !== undefined) el.textContent = dict[key];
+                });
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (dict[key] !== undefined) el.innerHTML = dict[key];
+                });
+
+                flagSlot.innerHTML = FLAGS[lang];
+                toggle.setAttribute('title', dict.name);
+                toggle.setAttribute('aria-label', 'Current language: ' + dict.name);
+
+                options.forEach((btn, code) => {
+                    btn.classList.toggle('active', code === lang);
+                    btn.setAttribute('aria-current', code === lang ? 'true' : 'false');
+                });
+            }
+
+            function openMenu() {
+                menu.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+                const active = menu.querySelector('.lang-option.active') || menu.firstElementChild;
+                if (active) active.focus();
+            }
+
+            function closeMenu(returnFocus = false) {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                if (returnFocus) toggle.focus();
+            }
+
+            function isOpen() {
+                return menu.classList.contains('open');
+            }
+
+            function focusSibling(direction) {
+                const items = Array.from(menu.querySelectorAll('.lang-option'));
+                const idx = items.indexOf(document.activeElement);
+                if (idx === -1) { items[0]?.focus(); return; }
+                const next = (idx + direction + items.length) % items.length;
+                items[next].focus();
+            }
+
+            Object.keys(TRANSLATIONS).forEach(code => {
+                const btn = document.createElement('button');
+                btn.className = 'lang-option';
+                btn.type = 'button';
+                btn.setAttribute('role', 'menuitem');
+                btn.setAttribute('data-lang', code);
+                btn.innerHTML = FLAGS[code] + '<span>' + TRANSLATIONS[code].name + '</span>';
+                btn.addEventListener('click', () => {
+                    applyLanguage(code);
+                    closeMenu(true);
+                });
+                menu.appendChild(btn);
+                options.set(code, btn);
+            });
+
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                isOpen() ? closeMenu() : openMenu();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!menu.contains(e.target) && e.target !== toggle) closeMenu();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!isOpen()) return;
+                if (e.key === 'Escape') { closeMenu(true); }
+                else if (e.key === 'ArrowDown') { e.preventDefault(); focusSibling(1); }
+                else if (e.key === 'ArrowUp') { e.preventDefault(); focusSibling(-1); }
+            });
+
+            applyLanguage(currentLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            generateStars(document.getElementById('stars'));
+            initLanguageSwitcher(
+                document.getElementById('langToggle'),
+                document.getElementById('langMenu'),
+                document.getElementById('flagSlot')
+            );
+        });
+    </script>
+</body>
+</html>
